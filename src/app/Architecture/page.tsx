@@ -1,5 +1,5 @@
-function page() {
-    return <div>Architecture Page</div>;
+function Page() {
+    return <div>Architecture Page WIP</div>;
 }
 
-export default page;
+export default Page;

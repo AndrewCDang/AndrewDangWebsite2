@@ -150,15 +150,16 @@ function Landing({ otherInView }: { otherInView: any }) {
                 >
                     {svgArrays.map((svg, i) => {
                         return (
-                            <LandingIntro
-                                key={i}
-                                scrollYProgress={scrollYProgress}
-                                otherInView={otherInView}
-                                index={i}
-                                containerWidth={containerWidth}
-                            >
-                                {svg}
-                            </LandingIntro>
+                            <div key={i}>
+                                <LandingIntro
+                                    scrollYProgress={scrollYProgress}
+                                    otherInView={otherInView}
+                                    index={i}
+                                    containerWidth={containerWidth}
+                                >
+                                    {svg}
+                                </LandingIntro>
+                            </div>
                         );
                     })}
                 </motion.div>

@@ -35,7 +35,7 @@ const images = [
     },
 ];
 
-function page() {
+function Page() {
     const [carousel, setCarousel] = useState(false);
     const [imageFocus, setImageFocus] = useState<number>(0);
 
@@ -114,4 +114,4 @@ function page() {
     );
 }
 
-export default page;
+export default Page;
