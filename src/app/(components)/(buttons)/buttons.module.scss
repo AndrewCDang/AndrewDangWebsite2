@@ -1,0 +1,174 @@
+@import "/src/app/styles/colours.scss";
+
+.anchor {
+    position: relative;
+    overflow: hidden;
+}
+
+@mixin buttonStyle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 2px solid $col-white;
+    background-color: $col-white;
+    padding: 0.25rem 0.5rem;
+    transition: box-shadow 0.05s ease-in-out;
+
+    & > div {
+        width: 1rem;
+        aspect-ratio: 1;
+        transition: transform 0.05s ease-in-out;
+        fill: $col-black;
+    }
+}
+
+.linkButton1 {
+    @include buttonStyle;
+
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        clip-path: circle(0% at 0% 50%);
+        transition: clip-path 0.2s ease-in-out;
+        z-index: 10;
+
+        & > div {
+            @include buttonStyle;
+            background-color: unset;
+
+            color: $col-white;
+            & > div {
+                fill: $col-white;
+            }
+        }
+    }
+    &:hover span {
+        clip-path: circle(150% at 0% 50%);
+    }
+    &:hover .span2 > div {
+        @include animation-rotate-2;
+    }
+
+    .span2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $col-black;
+        clip-path: circle(0% at 0% 50%);
+        transition: clip-path 0.2s ease-in-out;
+        z-index: 5;
+
+        & > div {
+            height: 100%;
+            width: 100%;
+            scale: 5;
+            filter: blur(4px);
+            background: conic-gradient(
+                from 180deg at 50% 50%,
+                $col-red 0deg,
+                $col-yellow 30deg,
+                $col-blue 120deg,
+                $col-red 180deg,
+                $col-yellow 240deg,
+                $col-blue 280deg,
+                $col-red 300deg
+            );
+        }
+    }
+
+    &:hover .span2 {
+        clip-path: circle(150% at 0% 50%);
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 12px $col-white;
+    }
+}
+
+@mixin buttonStyle2 {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 2px solid $col-white;
+    padding: 0.25rem 0.5rem;
+    color: $col-white;
+    background-color: unset;
+    transition: box-shadow 0.05s ease-in-out;
+
+    & > div {
+        width: 1rem;
+        aspect-ratio: 1;
+        transition: transform 0.05s ease-in-out;
+        fill: $col-white;
+    }
+}
+.linkButton2 {
+    @include buttonStyle2;
+
+    &:hover {
+        box-shadow: 0px 0px 8px $col-white;
+    }
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: $col-white;
+        clip-path: circle(0% at 0% 50%);
+        transition: clip-path 0.2s ease-in-out;
+
+        & > div {
+            @include buttonStyle2;
+            color: $col-black;
+            & > div {
+                fill: $col-black;
+            }
+        }
+    }
+    &:hover span {
+        clip-path: circle(150% at 0% 50%);
+    }
+}
+
+.button1 {
+    position: relative;
+    border: 2px solid $col-black;
+    background-color: unset;
+    height: fit-content;
+    width: fit-content;
+    & > div {
+        @include buttonStyle;
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: $col-black;
+            clip-path: circle(0% at 0% 50%);
+            transition: clip-path 0.2s ease-in-out;
+
+            & > div {
+                @include buttonStyle2;
+                justify-content: center;
+                height: 100%;
+                color: $col-white;
+                border: unset;
+                & > div {
+                    fill: $col-white;
+                }
+            }
+        }
+        &:hover span {
+            clip-path: circle(150% at 0% 50%);
+        }
+    }
+}

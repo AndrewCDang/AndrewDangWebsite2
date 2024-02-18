@@ -1,0 +1,74 @@
+$col-red: rgb(255, 86, 120);
+$col-blue: rgb(5, 203, 214);
+$col-yellow: rgb(255, 208, 86);
+$col-white: rgb(256, 256, 256);
+$col-grey: rgb(169, 169, 169);
+$col-black: rgb(0, 0, 0);
+
+$primary-glow: conic-gradient(
+    from 180deg at 50% 50%,
+    $col-red 0deg,
+    $col-blue 55deg,
+    $col-yellow 120deg,
+    $col-blue 160deg,
+    transparent 360deg
+);
+
+$primary-glow-2: conic-gradient(
+    from 180deg at 50% 50%,
+    $col-blue 0deg,
+    $col-red 55deg,
+    $col-yellow 120deg,
+    $col-red 160deg,
+    transparent 360deg
+);
+
+$primary-glow-3: conic-gradient(
+    from 180deg at 50% 50%,
+    $col-red 0deg,
+    $col-yellow 55deg,
+    $col-blue 120deg,
+    $col-yellow 160deg,
+    transparent 360deg
+);
+
+@mixin animation-rotate {
+    animation-name: animation-rotate;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation-rotate {
+    0% {
+        transform: rotate(0turn);
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(1turn);
+        opacity: 1;
+    }
+}
+
+@mixin animation-rotate-2 {
+    animation-name: animation-rotate-2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animation-rotate-2 {
+    0% {
+        transform: rotate(0turn);
+    }
+    100% {
+        transform: rotate(1turn);
+    }
+}

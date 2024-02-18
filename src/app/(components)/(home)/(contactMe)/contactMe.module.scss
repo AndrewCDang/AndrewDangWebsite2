@@ -1,0 +1,186 @@
+@import "/src/app/styles/colours.scss";
+@import "/src/app//styles//mixins";
+@import "/src//app/styles//breakpoints.scss";
+
+.container {
+    @include gridBox;
+    width: 100%;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 6rem;
+    position: relative;
+
+    .section {
+        grid-column: 2/-2;
+        grid-row: 2;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        width: fit-content;
+        margin: 0 auto;
+        z-index: 10;
+        & > h2 {
+            width: fit-content;
+            margin: 0 auto;
+            margin-bottom: 3rem;
+        }
+    }
+    .contactIcon {
+        width: 2rem;
+        aspect-ratio: 1;
+    }
+    .mediaGrid {
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3rem;
+        & > a {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            text-decoration: underline;
+        }
+    }
+
+    .mediaContainer {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .formContainer {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        & > div {
+            margin-top: 1rem;
+            align-self: flex-end;
+        }
+        width: clamp(300px, calc(240px + 10vw), 400px);
+    }
+
+    .formBg {
+        position: absolute;
+        left: 50%;
+        top: -1rem;
+        transform: translateX(-50%);
+        border-radius: 12rem;
+        width: 24rem;
+        height: 16rem;
+        background-color: white;
+        filter: blur(2.5rem);
+        opacity: 0.8;
+        z-index: 0;
+    }
+
+    form {
+        z-index: 10;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 2rem;
+        border: 0.5px solid $col-black;
+        position: relative;
+        fieldset {
+            position: relative;
+            border: unset;
+            padding: unset;
+            margin: 0;
+
+            input,
+            textarea {
+                width: 100%;
+                resize: none;
+                padding: 1rem 0.5rem;
+                border: unset;
+                font-size: 1rem;
+                font-weight: 400;
+                z-index: 10;
+                background: unset;
+                background-color: unset;
+            }
+
+            label {
+                left: 0.5rem;
+                top: 0.5rem;
+                color: $col-grey;
+                position: absolute;
+                transition: all 0.08s ease-in-out;
+                z-index: 10;
+            }
+            input + label {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            input:focus + label {
+                font-size: 0.7rem;
+                top: 0;
+                transform: translateY(0%);
+            }
+
+            input:not(:placeholder-shown) + label {
+                font-size: 0.7rem;
+                top: 0;
+                transform: translateY(0%);
+            }
+
+            textarea:focus + label {
+                font-size: 0.7rem;
+                top: 0;
+            }
+            textarea:not(:placeholder-shown) + label {
+                font-size: 0.7rem;
+                top: 0;
+            }
+
+            input:focus {
+                outline: 0;
+                box-shadow: none !important;
+                color: white;
+            }
+            textarea:focus {
+                outline: 0;
+                box-shadow: none !important;
+                color: white;
+            }
+            span {
+                background-color: $col-black;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                clip-path: circle(0% at 50% 100%);
+                transition: clip-path 0.3s ease-in-out;
+                z-index: -1;
+            }
+            .span1 {
+                clip-path: circle(0% at 50% 0%);
+            }
+            textarea:focus ~ span {
+                clip-path: circle(100% at 50% 100%);
+            }
+            input:focus ~ span {
+                clip-path: circle(100% at 50% 0%);
+            }
+        }
+        hr {
+            height: 0.5px;
+            margin: 0;
+            padding: 0;
+            background-color: $col-black;
+            border: unset;
+        }
+
+        .formBackground {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: white;
+            z-index: -1;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75">
+  <defs>
+    <style>
+      .b {
+        fill: #fff;
+      }
+
+      .c {
+        opacity: .3;
+      }
+    </style>
+  </defs>
+  <g class="c">
+    <circle class="b" cx="37.5" cy="37.5" r="34.5"/>
+    <path d="M37.5,6c17.37,0,31.5,14.13,31.5,31.5s-14.13,31.5-31.5,31.5S6,54.87,6,37.5,20.13,6,37.5,6m0-6C16.79,0,0,16.79,0,37.5s16.79,37.5,37.5,37.5,37.5-16.79,37.5-37.5S58.21,0,37.5,0h0Z"/>
+  </g>
+</svg>

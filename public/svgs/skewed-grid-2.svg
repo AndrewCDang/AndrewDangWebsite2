@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1001 1001">
+  <defs>
+    <style>
+      .c {
+        fill: url(#b);
+      }
+
+      .d, .e {
+        fill: none;
+      }
+
+      .e {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+    </style>
+    <pattern id="b" data-name="New Pattern 5" x="0" y="0" width="300" height="280.25" patternTransform="translate(.5 .5)" patternUnits="userSpaceOnUse" viewBox="0 0 300 280.25">
+      <g>
+        <rect class="d" width="300" height="280.25"/>
+        <line class="e" x1="296.85" y1="209.07" x2="1203.15" y2="631.69"/>
+        <line class="e" x1="-3.15" y1="209.07" x2="903.15" y2="631.69"/>
+        <line class="e" x1="-303.15" y1="209.07" x2="603.15" y2="631.69"/>
+        <line class="e" x1="-603.15" y1="209.07" x2="303.15" y2="631.69"/>
+        <line class="e" x1="-903.15" y1="209.07" x2="3.15" y2="631.69"/>
+        <line class="e" x1="296.85" y1="68.94" x2="1203.15" y2="491.56"/>
+        <line class="e" x1="-3.15" y1="68.94" x2="903.15" y2="491.56"/>
+        <line class="e" x1="-303.15" y1="68.94" x2="603.15" y2="491.56"/>
+        <line class="e" x1="-603.15" y1="68.94" x2="303.15" y2="491.56"/>
+        <line class="e" x1="-903.15" y1="68.94" x2="3.15" y2="491.56"/>
+        <line class="e" x1="296.85" y1="-71.18" x2="1203.15" y2="351.44"/>
+        <line class="e" x1="-3.15" y1="-71.18" x2="903.15" y2="351.44"/>
+        <line class="e" x1="-303.15" y1="-71.18" x2="603.15" y2="351.44"/>
+        <line class="e" x1="-603.15" y1="-71.18" x2="303.15" y2="351.44"/>
+        <line class="e" x1="-903.15" y1="-71.18" x2="3.15" y2="351.44"/>
+        <line class="e" x1="296.85" y1="-211.31" x2="1203.15" y2="211.31"/>
+        <line class="e" x1="-3.15" y1="-211.31" x2="903.15" y2="211.31"/>
+        <line class="e" x1="-303.15" y1="-211.31" x2="603.15" y2="211.31"/>
+        <line class="e" x1="-603.15" y1="-211.31" x2="303.15" y2="211.31"/>
+        <line class="e" x1="-903.15" y1="-211.31" x2="3.15" y2="211.31"/>
+        <line class="e" x1="296.85" y1="-351.44" x2="1203.15" y2="71.18"/>
+        <line class="e" x1="-3.15" y1="-351.44" x2="903.15" y2="71.18"/>
+        <line class="e" x1="-303.15" y1="-351.44" x2="603.15" y2="71.18"/>
+        <line class="e" x1="-603.15" y1="-351.44" x2="303.15" y2="71.18"/>
+        <line class="e" x1="-903.15" y1="-351.44" x2="3.15" y2="71.18"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect class="c" width="1001" height="1001"/>
+</svg>

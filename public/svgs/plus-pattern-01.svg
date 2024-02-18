@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .b, .c {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 6px;
+      }
+
+      .c, .d {
+        opacity: .3;
+      }
+    </style>
+  </defs>
+  <g class="d">
+    <line class="b" x1="250" y1="213" x2="250" y2="288"/>
+  </g>
+  <line class="c" x1="212" y1="251" x2="247" y2="251"/>
+  <line class="c" x1="253" y1="251" x2="288" y2="251"/>
+</svg>

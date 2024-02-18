@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500.25 500">
+  <defs>
+    <style>
+      .b {
+        fill: none;
+        opacity: .3;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <line class="b" x1="50.25" y1="0" x2="50.25" y2="500"/>
+  <line class="b" x1="150.75" x2="150.75" y2="500"/>
+  <line class="b" x1="250.75" x2="250.75" y2="500"/>
+  <line class="b" x1="350.75" x2="350.75" y2="500"/>
+  <line class="b" x1="450.75" x2="450.75" y2="500"/>
+  <line class="b" x1="0" y1="450.75" x2="500" y2="450.75"/>
+  <line class="b" x1="0" y1="350.25" x2="500.25" y2="350.25"/>
+  <line class="b" x1="0" y1="250.25" x2="500.25" y2="250.25"/>
+  <line class="b" x1="0" y1="150.25" x2="500.25" y2="150.25"/>
+  <line class="b" x1="0" y1="50.25" x2="500.25" y2="50.25"/>
+</svg>

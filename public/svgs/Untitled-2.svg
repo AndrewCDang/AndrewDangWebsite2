@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 400 600" style="enable-background:new 0 0 400 600;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st2{fill:url(#New_Pattern_3);stroke:#000000;stroke-miterlimit:10;}
+</style>
+<pattern  width="108.8" height="63.4" patternUnits="userSpaceOnUse" id="New_Pattern_3" viewBox="110.1 -65.4 108.8 63.4" style="overflow:visible;">
+	<g>
+		<rect x="110.1" y="-65.4" class="st0" width="108.8" height="63.4"/>
+		<line class="st1" x1="327.4" y1="-0.4" x2="217.8" y2="-64.2"/>
+		<line class="st1" x1="218.6" y1="-0.4" x2="109" y2="-64.2"/>
+		<line class="st1" x1="109.9" y1="-0.4" x2="0.3" y2="-64.2"/>
+		<line class="st1" x1="327.4" y1="-63.8" x2="217.8" y2="-127.5"/>
+		<line class="st1" x1="218.6" y1="-63.8" x2="109" y2="-127.5"/>
+		<line class="st1" x1="109.9" y1="-63.8" x2="0.3" y2="-127.5"/>
+	</g>
+</pattern>
+<rect x="0.5" y="-0.5" class="st2" width="400" height="600"/>
+</svg>
