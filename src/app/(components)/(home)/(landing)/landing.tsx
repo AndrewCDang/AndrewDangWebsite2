@@ -13,7 +13,11 @@ import { Square, Circle, Triangle } from "../../../(components)/svgs";
 import LandingText from "./landingText";
 
 function Landing({ otherInView }: { otherInView: any }) {
-    const svgArrays = [<Square />, <Triangle />, <Circle />];
+    const svgArrays = [
+        <Square key={0} />,
+        <Triangle key={1} />,
+        <Circle key={2} />,
+    ];
     const webRef = useRef(null);
     const landingRef = useRef(null);
     const [widthStart, setWidthStart] = useState("50%");
