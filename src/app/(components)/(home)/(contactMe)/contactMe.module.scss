@@ -79,12 +79,11 @@
         align-items: flex-start;
         width: 100%;
         gap: 2rem;
-        border: 0.5px solid $col-black;
         position: relative;
         fieldset {
             position: relative;
-            border: unset;
             padding: unset;
+            border: 0.5px solid $col-black;
             margin: 0;
 
             input,
@@ -165,6 +164,7 @@
                 clip-path: circle(100% at 50% 0%);
             }
         }
+
         hr {
             height: 0.5px;
             margin: 0;
@@ -182,5 +182,32 @@
             background-color: white;
             z-index: -1;
         }
+    }
+    .buttonContainer {
+        position: absolute;
+        bottom: -0.5rem;
+        transform: translateY(100%);
+        display: flex;
+    }
+    fieldset:nth-of-type(1) {
+        border-bottom: unset;
+    }
+    fieldset:nth-of-type(2) {
+        border-top: unset;
+    }
+    .errorsContainer {
+        display: flex;
+        flex-direction: column;
+        color: $col-red;
+        margin-top: 0;
+    }
+    .sentConfirmation {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        z-index: 0;
+        width: fit-content;
+        height: fit-content;
+        opacity: 0;
     }
 }

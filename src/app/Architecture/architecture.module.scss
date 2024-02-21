@@ -1,0 +1,295 @@
+@import "/src/app/styles/colours";
+@import "/src/app/styles/breakpoints";
+@import "/src/app/styles/_mixins";
+
+.container {
+    width: 100%;
+    label {
+        font-size: 1em;
+    }
+    padding-bottom: 5rem;
+}
+
+.projectLanding {
+    grid-column: 2/-2;
+}
+
+.landingBanner {
+    height: 50svh;
+    width: 100vw;
+    position: relative;
+    z-index: 1;
+    & > div {
+        height: 100%;
+        width: 100%;
+        & > img {
+            object-fit: cover;
+        }
+    }
+    @include breakpoint-mobile {
+        height: 25svh;
+    }
+}
+
+.landingText {
+    width: 100%;
+    z-index: 0;
+    color: $col-white;
+    margin: 0 auto;
+    @include gridBox;
+    & > div {
+        grid-column: 2/-2;
+        margin: 0 auto;
+        & > aside {
+            margin-top: 2rem;
+        }
+    }
+    @include breakpoint-mobile {
+    }
+    font-size: 0.65em !important;
+    line-height: clamp(1.12rem, 0.96rem + 1vw, 1.4rem);
+}
+.titleContainer {
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    > .table {
+        grid-row: 2;
+        grid-column: 2/-1;
+        @include breakpoint-mobile {
+            grid-row: 3;
+            grid-column: 1/-1;
+        }
+    }
+    > .flavour {
+        grid-row: 2;
+        grid-column: 1/1;
+        @include breakpoint-mobile {
+            grid-column: 1 / span 2;
+        }
+    }
+}
+.projectGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 0.5px solid $col-white;
+    & > div {
+        font-weight: 600;
+    }
+    > div:not(:last-of-type) {
+        border-bottom: 0.5px solid $col-white;
+    }
+    > p:not(:last-of-type) {
+        border-bottom: 0.5px solid $col-white;
+    }
+    > p {
+        border-left: 0.5px solid $col-white;
+        font-weight: 100 !important;
+    }
+    > * {
+        padding: 0.5rem 0.5rem 0.5rem 1rem;
+    }
+}
+
+.bannerBg {
+    width: 100vw;
+    background: linear-gradient(
+        to top,
+        $col-black 85%,
+        rgba($col-white, 0.05) 90%,
+        rgba($col-white, 0.15) 100%
+    );
+    position: relative;
+    background-color: $col-black;
+    padding-bottom: 2rem;
+    z-index: -30;
+}
+
+.projectContainer {
+    z-index: -40;
+}
+
+.quote {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    & > p:last-child {
+        color: $col-grey;
+    }
+}
+
+.landingContain {
+    width: calc(2 * 100% / 3);
+}
+
+.imageFull {
+    div {
+        width: 100%;
+        height: fit-content;
+        img {
+            object-fit: contain;
+            height: 100%;
+        }
+    }
+}
+
+.contentContainer {
+    @include gridBox;
+    margin: 0 auto;
+    & > div {
+        grid-column: 2/-2;
+    }
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.workContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 0.8em;
+}
+
+.splitContianer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    & > div:last-child {
+        grid-column: 1/-1;
+    }
+}
+
+.detailSection {
+    & > div {
+        width: 250%;
+    }
+    overflow-x: scroll;
+    transform: translateY(12px);
+}
+@include scrollX(".detailSection");
+
+.splitContainer2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+
+.landingDescription {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    & > section {
+        grid-column: 2/-1;
+    }
+}
+
+.textGlow {
+    filter: drop-shadow(0px 0px 8px rgba($col-white, 0.5));
+}
+
+.projectTitle {
+    width: calc(100% / 3);
+    margin-top: 2rem;
+}
+
+.yellowTitle {
+    color: $col-yellow;
+    font-weight: 700;
+}
+
+.blueTitle {
+    color: $col-blue;
+    font-weight: 700;
+}
+
+.redTitle {
+    color: $col-red;
+    font-weight: 700;
+}
+
+.modalAnnotations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+    gap: 1rem;
+}
+
+.linkNextProject {
+    position: absolute;
+    cursor: pointer;
+    aspect-ratio: 1;
+    background-color: rgba($col-white, 0.8);
+    bottom: -120px;
+    right: 0;
+    z-index: 20;
+    box-shadow: 0px 12px 8px rgba($col-black, 0.5);
+    @include bouncingAnimationData;
+
+    & > div {
+        & > h6 {
+            text-decoration: underline;
+            align-self: flex-end;
+            width: clamp(128px, calc(112px + 10vw), 240px);
+        }
+        h3,
+        h6 {
+            filter: drop-shadow(0px 0px 8px rgba($col-white, 0.8));
+            transition: all 0.12s ease-in-out;
+        }
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding: 0.5rem;
+    }
+}
+.linkNextProject:hover {
+    box-shadow: 0px 0px 16px rgba($col-white, 0.5);
+}
+.linkNextProject:hover .linkImage {
+    clip-path: circle(200% at 100% 100%);
+}
+.linkTextContainer {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    h3,
+    h6 {
+        transition: all 0.16s ease-in-out;
+    }
+}
+.linkNextProject:hover .linkTextContainer {
+    h3,
+    h6 {
+        font-size: 0.8em;
+        line-height: 1em;
+        color: white;
+        filter: drop-shadow(0px 0px 8px rgba($col-black, 0.8));
+    }
+}
+
+.linkNextProject:hover .jumptext {
+    color: white;
+    filter: drop-shadow(0px 0px 8px rgba($col-black, 0.8));
+}
+
+.linkImage {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    clip-path: circle(0% at 100% 100%);
+    transition: all 0.3s ease-in-out;
+}
+.linkTextTitle {
+    text-wrap: nowrap;
+    margin-bottom: 0.5rem;
+}
+.linkTextWrap {
+    max-width: 120px;
+}

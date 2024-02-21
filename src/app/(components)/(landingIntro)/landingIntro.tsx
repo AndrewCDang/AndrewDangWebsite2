@@ -218,7 +218,7 @@ function LandingIntro({
             scaleXRef.current = lerp(
                 scaleXRef.current,
                 targetScale,
-                resetSpeed
+                resetSpeed * 3
             );
             scaleYRef.current = lerp(
                 scaleYRef.current,
@@ -228,7 +228,7 @@ function LandingIntro({
             translateXRef.current = lerp(
                 translateXRef.current,
                 targetTranslate,
-                resetSpeed * 2
+                resetSpeed * 3
             );
             translateYRef.current = lerp(
                 translateYRef.current,

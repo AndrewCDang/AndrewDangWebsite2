@@ -44,6 +44,7 @@ p {
 label {
     font-size: clamp(0.7rem, 0.6rem + 1vw, 1rem);
     line-height: clamp(1rem, 0.95rem + 1vw, 1.2rem);
+    color: $col-grey;
 }
 
 h1,
@@ -60,6 +61,7 @@ html {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .mainLayout {
@@ -70,11 +72,11 @@ html {
 
 body {
     margin: 0;
-    overflow-x: hidden;
     & > section {
         min-height: calc(100dvh - 3.5rem);
     }
     position: relative;
+    overflow-x: hidden;
 }
 
 a {

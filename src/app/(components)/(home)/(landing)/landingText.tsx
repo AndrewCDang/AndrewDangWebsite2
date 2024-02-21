@@ -20,7 +20,6 @@ function LandingText({ landingIn }: { landingIn: boolean }) {
 
     const line3 = "Architecture";
     const line3Array = line3.split("");
-    console.log(line3Array.length); //1.175
 
     const line4 = "and`I`like`to`create";
     const line4Array = line4.split("");

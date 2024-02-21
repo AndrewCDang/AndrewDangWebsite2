@@ -1,8 +1,8 @@
-import { useRef } from "react";
 import style from "./otherWorks.module.scss";
 import architectureImg from "/public/architecture/architecture-banner-btn.jpg";
 import artImg from "/public/art/andrewDang_art4-lq.jpg";
 import { motion, useTransform } from "framer-motion";
+import Link from "next/link";
 
 import Image from "next/image";
 
@@ -27,30 +27,32 @@ function OtherWorks({ scrollYProgress }: { scrollYProgress: any }) {
                 <div className={style.sectionContainer}>
                     {itemsArry.map((item, i) => {
                         return (
-                            <section key={i} className={style.workContainer}>
-                                <div>
-                                    <motion.div
-                                        style={{
-                                            y: parallax,
-                                            height: "100%",
-                                            width: "100%",
-                                        }}
-                                    >
-                                        <div className={style.workImage}>
-                                            <Image
-                                                style={{
-                                                    width: "100%",
-                                                    height: "auto",
-                                                }}
-                                                alt=""
-                                                placeholder="blur"
-                                                src={item.src}
-                                            />
-                                        </div>
-                                    </motion.div>
-                                </div>
-                                <h5>{item.name}</h5>
-                            </section>
+                            <Link href={`/${item.name}`} key={i}>
+                                <section className={style.workContainer}>
+                                    <div>
+                                        <motion.div
+                                            style={{
+                                                y: parallax,
+                                                height: "100%",
+                                                width: "100%",
+                                            }}
+                                        >
+                                            <div className={style.workImage}>
+                                                <Image
+                                                    style={{
+                                                        width: "100%",
+                                                        height: "auto",
+                                                    }}
+                                                    alt=""
+                                                    placeholder="blur"
+                                                    src={item.src}
+                                                />
+                                            </div>
+                                        </motion.div>
+                                    </div>
+                                    <h5>{item.name}</h5>
+                                </section>
+                            </Link>
                         );
                     })}
                 </div>

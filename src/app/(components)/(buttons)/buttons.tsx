@@ -49,20 +49,37 @@ export function LinkButton2({ text, link }: { text: string; link: string }) {
     );
 }
 
-export function Button({ text }: { text: string }) {
+import { LoadingSpin } from "../svgs";
+
+export function Button({
+    text,
+    handler,
+    loading,
+}: {
+    text: string;
+    handler?: () => void;
+    loading?: boolean;
+}) {
+    const loadingSpinAni = (
+        <div style={{ stroke: "black", width: "100%" }}>
+            <LoadingSpin />
+        </div>
+    );
+    const loadingSpinHover = (
+        <div style={{ stroke: "white", width: "100%" }}>
+            <LoadingSpin />
+        </div>
+    );
+
     return (
-        <button className={style.button1}>
+        <button onClick={() => handler && handler()} className={style.button1}>
             <div>
                 <h6>{text}</h6>
-                <div>
-                    <RightArrow />
-                </div>
+                <div>{loading ? loadingSpinAni : <RightArrow />}</div>
                 <span>
                     <div>
                         <h6>{text}</h6>
-                        <div>
-                            <RightArrow />
-                        </div>
+                        <div>{loading ? loadingSpinHover : <RightArrow />}</div>
                     </div>
                 </span>
             </div>

@@ -6,7 +6,8 @@
     @include gridBox;
     width: 100%;
     max-width: unset;
-    position: relative;
+    position: fixed;
+    z-index: 30;
     & > section {
         grid-column: 2/-2;
         display: grid;

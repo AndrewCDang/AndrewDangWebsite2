@@ -18,6 +18,8 @@
     & > div {
         width: 1rem;
         aspect-ratio: 1;
+        margin: 0;
+        display: flex;
         transition: transform 0.05s ease-in-out;
         fill: $col-black;
     }
@@ -25,6 +27,7 @@
 
 .linkButton1 {
     @include buttonStyle;
+    color: $col-black;
 
     span {
         position: absolute;
@@ -105,6 +108,9 @@
     & > div {
         width: 1rem;
         aspect-ratio: 1;
+        margin: 0;
+        display: flex;
+
         transition: transform 0.05s ease-in-out;
         fill: $col-white;
     }
@@ -146,6 +152,7 @@
     width: fit-content;
     & > div {
         @include buttonStyle;
+        display: flex;
         span {
             position: absolute;
             top: 0;
@@ -160,10 +167,10 @@
                 @include buttonStyle2;
                 justify-content: center;
                 height: 100%;
-                color: $col-white;
+                color: $col-white !important;
                 border: unset;
                 & > div {
-                    fill: $col-white;
+                    fill: $col-white !important;
                 }
             }
         }

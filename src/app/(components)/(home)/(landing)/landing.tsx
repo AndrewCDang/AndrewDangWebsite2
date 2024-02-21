@@ -9,7 +9,12 @@ import {
 } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import LandingIntro from "../../(landingIntro)/landingIntro";
-import { Square, Circle, Triangle } from "../../../(components)/svgs";
+import {
+    Square,
+    Circle,
+    Triangle,
+    RightArrow,
+} from "../../../(components)/svgs";
 import LandingText from "./landingText";
 
 function Landing({ otherInView }: { otherInView: any }) {
@@ -52,7 +57,6 @@ function Landing({ otherInView }: { otherInView: any }) {
 
     // Handling window resize / resetting animation
     function handleResize() {
-        console.log("Window width:", window.innerWidth);
         setWindowDim();
     }
 
@@ -127,10 +131,10 @@ function Landing({ otherInView }: { otherInView: any }) {
 
     return (
         <section ref={landingRef} className={styles.container}>
-            <ReactLenis
+            {/* <ReactLenis
                 root
                 options={{ lerp: webPortfolioInView ? 0.1 : 10 }}
-            ></ReactLenis>
+            ></ReactLenis> */}
             <motion.div
                 ref={webRef}
                 style={{
@@ -168,6 +172,29 @@ function Landing({ otherInView }: { otherInView: any }) {
                     })}
                 </motion.div>
             </div>
+
+            <aside className={styles.bottomContainer}>
+                <div className={styles.title}>
+                    <div>
+                        <h1>Web Apps</h1>
+                        <h2>Portfolio</h2>
+                        <div className={styles.glow}>
+                            <div></div>
+                        </div>
+                        <div className={styles.glow2}>
+                            <div></div>
+                        </div>
+                        <div className={styles.glow3}>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>{" "}
+                <div className={styles.bottomPointer}>
+                    <div>
+                        <RightArrow />
+                    </div>
+                </div>
+            </aside>
         </section>
     );
 }

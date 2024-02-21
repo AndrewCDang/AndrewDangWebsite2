@@ -185,20 +185,6 @@ function WebPortfolio() {
     return (
         <section className={styles.portfolioContainer}>
             <section className={styles.portfolio}>
-                <div className={styles.title}>
-                    <div>
-                        <h1>Portfolio Projects</h1>
-                        <div className={styles.glow}>
-                            <div></div>
-                        </div>
-                        <div className={styles.glow2}>
-                            <div></div>
-                        </div>
-                        <div className={styles.glow3}>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
                 <PortfolioItem props={clipprPortfolio} />
                 <hr className={styles.hr}></hr>
                 <PortfolioItem props={racketPortfolio} />
