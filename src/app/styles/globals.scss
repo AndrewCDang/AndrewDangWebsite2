@@ -73,7 +73,7 @@ html {
 body {
     margin: 0;
     & > section {
-        min-height: calc(100dvh - 3.5rem);
+        min-height: calc(100svh - 3.5rem);
     }
     position: relative;
     overflow-x: hidden;

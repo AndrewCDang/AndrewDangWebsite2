@@ -18,7 +18,7 @@
 
 .container {
     position: relative;
-    height: 200dvh;
+    height: 200svh;
     overflow: clip;
     width: 100%;
     z-index: -1;
@@ -30,10 +30,10 @@
     display: flex;
     width: 100%;
 
-    height: calc(100dvh - 2.5rem - 16px);
+    height: calc(100svh - 2.5rem - 16px);
 }
 .landingBg {
-    height: 100dvh;
+    height: 100svh;
     width: 100vw;
     background-image: url("/svgs/grid-svg.svg");
     background-repeat: repeat;
