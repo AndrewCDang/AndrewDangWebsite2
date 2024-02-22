@@ -10,6 +10,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
     title: "AD",
     description: "Andrew Dang Portfolio",
+
     viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 };
 
