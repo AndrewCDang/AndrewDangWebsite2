@@ -63,7 +63,7 @@ function LandingIntro({
     const scaleHeight = useTransform(
         scrollYProgress,
         [0, 0.5, 1],
-        ["calc4rem - 0%)", "calc(3rem + 50%)", "calc(0rem + 100svh)"]
+        ["calc4rem - 0%)", "calc(3rem + 50%)", "calc(0rem + 100vh)"]
     );
 
     const blur1 = useTransform(
