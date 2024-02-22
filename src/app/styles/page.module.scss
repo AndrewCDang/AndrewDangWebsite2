@@ -30,10 +30,10 @@
     display: flex;
     width: 100%;
 
-    height: calc(100svh - 2.5rem - 16px);
+    height: calc(100lvh - 2.5rem - 16px);
 }
 .landingBg {
-    height: 100svh;
+    height: 100lvh;
     width: 100vw;
     background-image: url("/svgs/grid-svg.svg");
     background-repeat: repeat;
