@@ -17,10 +17,10 @@ export const exploreText = {
 export const exploreFlavourText = (
     <div className={`${style.quote}`}>
         <p>
-            I explored Philippe Rahm's groundbreaking project, which applied
-            advanced climatic technology to control outdoor environments,
-            extending indoor climate management outdoors as a solution to
-            climate change's rising temperatures.
+            I explored Philippe Rahm&apos;s groundbreaking project, which
+            applied advanced climatic technology to control outdoor
+            environments, extending indoor climate management outdoors as a
+            solution to climate change&apos;s rising temperatures.
         </p>
     </div>
 );
@@ -32,11 +32,11 @@ export const exploreDescription = (
         <p className={""}>
             Rahm used computational fluid dynamics to identify low-heat,
             humidity, and pollution areas, enhancing these with climatic
-            devices. This created "Climatic Pathways," offering varied climatic
-            experiences. Rahm's innovative approach aimed to redefine
-            architecture through weather processes, creating a vibrant mix of
-            climatic conditions and experiences through continuous climate
-            modulation.
+            devices. This created &quot;Climatic Pathways&quot;, offering varied
+            climatic experiences. Rahm&apos;s innovative approach aimed to
+            redefine architecture through weather processes, creating a vibrant
+            mix of climatic conditions and experiences through continuous
+            climate modulation.
         </p>
     </section>
 );

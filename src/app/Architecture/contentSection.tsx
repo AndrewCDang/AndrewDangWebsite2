@@ -3,6 +3,10 @@ import style from "./architecture.module.scss";
 import { ReactElement, RefObject, useEffect, useRef } from "react";
 import { MotionValue } from "framer-motion";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Image, { StaticImageData } from "next/image";
+
+import exploreImage from "../../../public/architecture/expl-banner.jpg";
+import duddImage from "../../../public/architecture/exterior-render.jpg";
 
 type LandingText = {
     title: string;
@@ -31,20 +35,38 @@ function ContentSection({
         url,
     }: {
         scrollY: MotionValue<string>;
-        url: string;
+        url: StaticImageData;
     }) => {
         return (
-            <div style={{ position: "relative" }}>
-                <motion.img
-                    src={url}
+            <div
+                style={{
+                    position: "relative",
+                    overflow: "hidden",
+                    width: "100%",
+                    height: "100%",
+                }}
+            >
+                <motion.div
                     style={{
-                        objectPosition: scrollY,
-                        objectFit: "cover",
+                        position: "absolute",
+                        bottom: scrollY,
                         width: "100%",
-                        height: "100%",
                     }}
-                    alt="architecture image"
-                ></motion.img>
+                >
+                    <div style={{ position: "relative" }}>
+                        <Image
+                            src={url}
+                            style={{
+                                objectFit: "cover",
+                                width: "100%",
+                                height: "100%",
+                            }}
+                            layout="responsive"
+                            alt="architecture image"
+                            placeholder="blur"
+                        ></Image>
+                    </div>
+                </motion.div>
             </div>
         );
     };
@@ -53,13 +75,13 @@ function ContentSection({
 
     const { scrollYProgress } = useScroll({
         target: scrollRef,
-        offset: ["start end", "end start"],
+        offset: ["start start", "end start"],
     });
 
     const transformObjectPos = useTransform(
         scrollYProgress,
-        [0.75, 1],
-        ["50% 80%", "50% 0%"]
+        [0, 1],
+        ["-8%", "-100%"]
     );
 
     const Dudd1 = ({
@@ -67,7 +89,7 @@ function ContentSection({
         url,
     }: {
         scrollY: MotionValue<string>;
-        url: string;
+        url: StaticImageData;
     }) => {
         return ImageComponentCarouselHD({ scrollY: scrollY, url: url });
     };
@@ -77,7 +99,7 @@ function ContentSection({
         url,
     }: {
         scrollY: MotionValue<string>;
-        url: string;
+        url: StaticImageData;
     }) => {
         return ImageComponentCarouselHD({ scrollY: scrollY, url: url });
     };
@@ -95,17 +117,18 @@ function ContentSection({
 
     return (
         <section>
-            <motion.div ref={scrollRef} className={`${style.landingBanner}`}>
+            <motion.div className={`${style.landingBanner}`}>
                 {image === "architecture" ? (
-                    <Dudd1
-                        scrollY={transformObjectPos}
-                        url="/architecture/exterior-render.jpg"
-                    />
+                    <div ref={scrollRef}>
+                        <Dudd1 scrollY={transformObjectPos} url={duddImage} />
+                    </div>
                 ) : (
-                    <Dudd2
-                        scrollY={transformObjectPos}
-                        url="/architecture/expl-banner.jpg"
-                    />
+                    <div ref={scrollRef}>
+                        <Dudd2
+                            scrollY={transformObjectPos}
+                            url={exploreImage}
+                        />
+                    </div>
                 )}
                 <aside onClick={scrollTo} className={style.linkNextProject}>
                     <div>

@@ -38,7 +38,7 @@ export const duddLandindDescription = (
             to the initiative is the development of a sustainable food system
             designed to supply fresh ingredients for the school's meal programs
             and educate students on eco-friendly food practices. The project
-            intends to broaden the scope of Duddingston’s agricultural
+            intends to broaden the scope of Duddingston&apos;s agricultural
             activities, offering additional land and improved facilities for
             growing, as well as the local commerce of produce.
         </p>
@@ -83,12 +83,12 @@ export const duddContent = (
                     <strong>Bringing nature indoors </strong>
                     <br></br>
                     The design utilises rammed earth construction to seamlessly
-                    blend the building's raw exterior with the interior's
-                    comfort. Expressive timber portal frames extend across the
-                    primary library area, promoting flexibility and openness.
-                    The façade, expressed in brick, harmonises with the local
-                    townscape while safeguarding the moisture-sensitive rammed
-                    earth against erosion.
+                    blend the building&apos;s raw exterior with the
+                    interior&apos;s comfort. Expressive timber portal frames
+                    extend across the primary library area, promoting
+                    flexibility and openness. The façade, expressed in brick,
+                    harmonises with the local townscape while safeguarding the
+                    moisture-sensitive rammed earth against erosion.
                 </div>
             </section>
         </div>
