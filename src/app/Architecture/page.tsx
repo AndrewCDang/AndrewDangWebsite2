@@ -61,7 +61,7 @@ function Page() {
     const duddContentRef = useRef(null);
 
     return (
-        <section>
+        <section style={{ overflow: "hidden" }}>
             <section ref={duddContentRef} className={style.container}>
                 <LandingBanner
                     image={"architecture"}
