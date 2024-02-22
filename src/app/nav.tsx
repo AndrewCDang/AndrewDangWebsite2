@@ -79,7 +79,7 @@ function Nav() {
         <nav className={styles.navBar}>
             <section>
                 <Link href={"/"}>
-                    <div className={styles.logo}>
+                    <div style={{ fill: "black" }} className={styles.logo}>
                         <Logo />
                     </div>
                 </Link>

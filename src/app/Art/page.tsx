@@ -40,7 +40,10 @@ function Page() {
     const [imageFocus, setImageFocus] = useState<number>(0);
 
     return (
-        <section className={style.container}>
+        <section
+            style={{ zIndex: carousel ? 200 : 50 }}
+            className={style.container}
+        >
             <div>
                 <div className={style.imageGrid}>
                     {images.map((image, index) => {
