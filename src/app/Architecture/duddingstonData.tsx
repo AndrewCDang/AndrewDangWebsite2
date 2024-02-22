@@ -36,11 +36,11 @@ export const duddLandindDescription = (
             expansion of current allotments, the creation of new communal
             spaces, and the development of pathways in untapped areas. Central
             to the initiative is the development of a sustainable food system
-            designed to supply fresh ingredients for the school's meal programs
-            and educate students on eco-friendly food practices. The project
-            intends to broaden the scope of Duddingston&apos;s agricultural
-            activities, offering additional land and improved facilities for
-            growing, as well as the local commerce of produce.
+            designed to supply fresh ingredients for the school&apos;s meal
+            programs and educate students on eco-friendly food practices. The
+            project intends to broaden the scope of Duddingston&apos;s
+            agricultural activities, offering additional land and improved
+            facilities for growing, as well as the local commerce of produce.
         </p>
     </section>
 );
