@@ -8,7 +8,7 @@ const poppins = Poppins({
     weight: ["400", "500", "600", "700", "800", "900"],
 });
 export const metadata: Metadata = {
-    title: "AD",
+    title: "Andrew Dang",
     description: "Andrew Dang Portfolio",
 
     viewport: "width=device-width, initial-scale=1, maximum-scale=1",
