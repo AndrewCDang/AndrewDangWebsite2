@@ -22,6 +22,9 @@
         display: flex;
         transition: transform 0.05s ease-in-out;
         fill: $col-black;
+        svg {
+            fill: $col-black;
+        }
     }
 }
 
@@ -46,6 +49,9 @@
             color: $col-white;
             & > div {
                 fill: $col-white;
+                svg {
+                    fill: $col-white;
+                }
             }
         }
     }
@@ -113,6 +119,9 @@
 
         transition: transform 0.05s ease-in-out;
         fill: $col-white;
+        svg {
+            fill: $col-white;
+        }
     }
 }
 .linkButton2 {
@@ -136,6 +145,9 @@
             color: $col-black;
             & > div {
                 fill: $col-black;
+                svg {
+                    fill: $col-black;
+                }
             }
         }
     }
@@ -171,6 +183,9 @@
                 border: unset;
                 & > div {
                     fill: $col-white !important;
+                    svg {
+                        fill: $col-white;
+                    }
                 }
             }
         }
