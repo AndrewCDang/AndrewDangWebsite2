@@ -137,7 +137,7 @@ const clipprPortfolio = {
 };
 
 const webPortfolio = {
-    name: "Website Portfolio.",
+    name: "Website Portfolio",
     headings: ["The website you're currently on!"],
     techStack: [
         ["Next.js", "TypeScript"],
