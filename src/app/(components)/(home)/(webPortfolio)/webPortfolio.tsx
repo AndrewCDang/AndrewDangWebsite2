@@ -13,6 +13,7 @@ import racket_gif2 from "../../../../../public/homepage/homepage_racket2.gif";
 import racket_gif3 from "../../../../../public/homepage/homepage_racket3.gif";
 import hangman_gif1 from "../../../../../public/homepage/homepage_hangman1.gif";
 import hangman_gif2 from "../../../../../public/homepage/homepage_hangman2.gif";
+import portfolio_gif from "../../../../../public/homepage/homepage-portfolio.gif";
 
 import Image from "next/image";
 
@@ -21,7 +22,7 @@ type PortfolioProps = {
     headings: string[];
     techStack: Array<string[]>;
     gitLink: string;
-    webLink: string;
+    webLink?: string;
     figures: { caption: string; image: ReactNode }[];
     scrollBar: boolean;
 };
@@ -81,7 +82,12 @@ const PortfolioItem = ({ props }: { props: PortfolioProps }) => {
                 {/* Buttons */}
                 <div className={styles.linksContainer}>
                     <LinkButton2 text="Code" link={props.gitLink} />
-                    <LinkButton1 text="Visit Website" link={props.webLink} />
+                    {props.webLink && (
+                        <LinkButton1
+                            text="Visit Website"
+                            link={props.webLink}
+                        />
+                    )}
                 </div>
             </div>
         </section>
@@ -128,6 +134,24 @@ const clipprPortfolio = {
         },
     ],
     scrollBar: true,
+};
+
+const webPortfolio = {
+    name: "Website Portfolio.",
+    headings: ["The website you're currently on!"],
+    techStack: [
+        ["Next.js", "TypeScript"],
+        ["SASS/SCSS", "Framer Motion"],
+    ],
+    gitLink: "https://github.com/AndrewCDang/AndrewDangWebsite2",
+    figures: [
+        {
+            caption:
+                "Portfolio website consisting of dynamic custom and scroll-based animations",
+            image: <Image alt={"clippr image"} src={portfolio_gif} />,
+        },
+    ],
+    scrollBar: false,
 };
 
 const racketPortfolio = {
@@ -186,6 +210,8 @@ function WebPortfolio() {
         <section className={styles.portfolioContainer}>
             <section className={styles.portfolio}>
                 <PortfolioItem props={clipprPortfolio} />
+                <hr className={styles.hr}></hr>
+                <PortfolioItem props={webPortfolio} />
                 <hr className={styles.hr}></hr>
                 <PortfolioItem props={racketPortfolio} />
                 <hr className={styles.hr}></hr>

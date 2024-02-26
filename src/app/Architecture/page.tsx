@@ -1,5 +1,5 @@
 "use client";
-import { ReactElement, RefObject, useEffect } from "react";
+import { ReactElement, RefObject } from "react";
 import style from "./architecture.module.scss";
 import ContentSection from "./contentSection";
 import {
