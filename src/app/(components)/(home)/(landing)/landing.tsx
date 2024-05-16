@@ -178,6 +178,20 @@ function Landing({ otherInView }: { otherInView: any }) {
                     <div>
                         <h1>Web Apps</h1>
                         <h2>Portfolio</h2>
+                        <div className={styles.summaryContainer}>
+                            <h6>
+                                I enjoy creating visually delightful and
+                                engaging user experiences
+                            </h6>
+                            <h6>
+                                I create apps based on my hobbies, personal
+                                challenges, and productivity needs. These
+                                projects have given me invaluable experience
+                                with a wide range of front-end and back-end
+                                technologies.
+                            </h6>
+                        </div>
+
                         <div className={styles.glow}>
                             <div></div>
                         </div>

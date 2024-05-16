@@ -66,23 +66,23 @@ function LandingIntro({
         ["calc4rem - 0%)", "calc(3rem + 50%)", "calc(0rem + 100vh)"]
     );
 
-    const blur1 = useTransform(
-        scrollYProgress,
-        [0, 0.25, 0.95],
-        [`blur(${0}px)`, `blur(${16}px)`, `blur(${0}px)`]
-    );
-    const blur2 = useTransform(
-        scrollYProgress,
-        [0, 1],
-        [`blur(${0}px)`, `blur(${2}px)`]
-    );
-    const blur3 = useTransform(
-        scrollYProgress,
-        [0, 0.5],
-        [`blur(${0}px)`, `blur(${16}px)`]
-    );
+    // const blur1 = useTransform(
+    //     scrollYProgress,
+    //     [0, 0.25, 0.95],
+    //     [`blur(${0}px)`, `blur(${16}px)`, `blur(${0}px)`]
+    // );
+    // const blur2 = useTransform(
+    //     scrollYProgress,
+    //     [0, 1],
+    //     [`blur(${0}px)`, `blur(${2}px)`]
+    // );
+    // const blur3 = useTransform(
+    //     scrollYProgress,
+    //     [0, 0.5],
+    //     [`blur(${0}px)`, `blur(${16}px)`]
+    // );
 
-    const blurArray = [blur1, blur2, blur3];
+    // const blurArray = [blur1, blur2, blur3];
     const scaleArray = [scale, scale2, scale3];
 
     //Infinite  Sin wave animation playing when scroll Y is below certain point
@@ -334,7 +334,7 @@ function LandingIntro({
                         >
                             <motion.div
                                 style={{
-                                    filter: blurArray[index],
+                                    // filter: blurArray[index],
                                     height: "100%",
                                 }}
                                 animate={{
@@ -395,7 +395,7 @@ function LandingIntro({
                                 style={{
                                     scaleX: scaleX,
                                     scaleY: scaleY,
-                                    filter: blurArray[index],
+                                    // filter: blurArray[index],
                                     rotate: rotate,
                                     fill:
                                         index === 1

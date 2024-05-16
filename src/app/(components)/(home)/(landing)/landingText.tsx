@@ -5,15 +5,23 @@ import { useEffect } from "react";
 function LandingText({ landingIn }: { landingIn: boolean }) {
     const [scope, animate] = useAnimate();
     const [scope0, animate0] = useAnimate();
+    const [scope0b, animate0b] = useAnimate();
     const [scope2, animate2] = useAnimate();
     const [scope3, animate3] = useAnimate();
     const [scope4, animate4] = useAnimate();
 
-    const line0 = "I'm`a";
+    const line00 = "Hi`I'm`Andrew`Dang";
+    const line00Array = line00.split("");
+
+    const line0 = "I'm`a...";
     const line0Array = line0.split("");
 
     const line1 = "Web`Developer";
     const line1Array = line1.split(""); //0.35
+
+    const line1b =
+        "I`m`passionate`about`creating`visually`engaging`web`apps`with`delightful`user`experiences`";
+    const line1bArray = line1.split(""); //0.35
 
     const line2 = "With`a`background`in";
     const line2Array = line2.split(""); //0.85
@@ -36,8 +44,13 @@ function LandingText({ landingIn }: { landingIn: boolean }) {
     };
 
     const constHandleAnimate = async () => {
-        animate0(
-            "p",
+        await animate0(
+            "h3",
+            { opacity: 1, rotate: 0, scale: 1 },
+            { delay: stagger(0.01) }
+        );
+        await animate0b(
+            "h3",
             { opacity: 1, rotate: 0, scale: 1 },
             { delay: stagger(0.01) }
         );
@@ -48,22 +61,22 @@ function LandingText({ landingIn }: { landingIn: boolean }) {
         );
 
         animate2(
-            "p",
+            "h5",
             { opacity: 1, rotate: 0, scale: 1 },
             { delay: stagger(0.01) }
         );
         await animate3(
-            "h1",
+            "h5",
             { opacity: 1, rotate: 0, scale: 1 },
             { delay: stagger(0.025) }
         );
-        animate4(
-            "p",
+        await animate4(
+            "h5",
             { opacity: 1, rotate: 0, scale: 1 },
             { delay: stagger(0.01) }
         );
         await animate4(
-            "h1",
+            "h5",
             { opacity: 1, rotate: 0, scale: 1 },
             { delay: stagger(0.025) }
         );
@@ -95,10 +108,10 @@ function LandingText({ landingIn }: { landingIn: boolean }) {
             <div>
                 <div>
                     <div className={styles.linesContainer}>
-                        <div ref={scope0} className={styles.lines}>
-                            {line0Array.map((letter, index) => {
+                        <div ref={scope0} className={`${styles.lines}`}>
+                            {line00Array.map((letter, index) => {
                                 return (
-                                    <motion.p
+                                    <motion.h3
                                         key={index}
                                         variants={letterVariant}
                                         initial="initial"
@@ -106,14 +119,36 @@ function LandingText({ landingIn }: { landingIn: boolean }) {
                                         <span
                                             style={{
                                                 opacity:
-                                                    line1Array[index] === "`"
+                                                    line00Array[index] === "`"
                                                         ? 0
                                                         : 1,
                                             }}
                                         >
                                             {letter}
                                         </span>
-                                    </motion.p>
+                                    </motion.h3>
+                                );
+                            })}
+                        </div>
+                        <div ref={scope0b} className={`${styles.lines}`}>
+                            {line0Array.map((letter, index) => {
+                                return (
+                                    <motion.h3
+                                        key={index}
+                                        variants={letterVariant}
+                                        initial="initial"
+                                    >
+                                        <span
+                                            style={{
+                                                opacity:
+                                                    line0Array[index] === "`"
+                                                        ? 0
+                                                        : 1,
+                                            }}
+                                        >
+                                            {letter}
+                                        </span>
+                                    </motion.h3>
                                 );
                             })}
                         </div>
@@ -146,7 +181,7 @@ function LandingText({ landingIn }: { landingIn: boolean }) {
                         <div className={styles.lines}>
                             {line2Array.map((letter, index) => {
                                 return (
-                                    <motion.p
+                                    <motion.h5
                                         key={index}
                                         variants={letterVariant}
                                         initial="initial"
@@ -161,14 +196,14 @@ function LandingText({ landingIn }: { landingIn: boolean }) {
                                         >
                                             {letter}
                                         </span>
-                                    </motion.p>
+                                    </motion.h5>
                                 );
                             })}
                         </div>
                         <div ref={scope3} className={styles.lines}>
                             {line3Array.map((letter, index) => {
                                 return (
-                                    <motion.h1
+                                    <motion.h5
                                         key={index}
                                         className={styles.blue}
                                         variants={letterVariant}
@@ -184,7 +219,7 @@ function LandingText({ landingIn }: { landingIn: boolean }) {
                                         >
                                             {letter}
                                         </span>
-                                    </motion.h1>
+                                    </motion.h5>
                                 );
                             })}
                         </div>
@@ -193,7 +228,7 @@ function LandingText({ landingIn }: { landingIn: boolean }) {
                         <div className={styles.lines}>
                             {line4Array.map((letter, index) => {
                                 return (
-                                    <motion.p
+                                    <motion.h5
                                         key={index}
                                         variants={letterVariant}
                                         initial="initial"
@@ -208,14 +243,14 @@ function LandingText({ landingIn }: { landingIn: boolean }) {
                                         >
                                             {letter}
                                         </span>
-                                    </motion.p>
+                                    </motion.h5>
                                 );
                             })}
                         </div>
                         <motion.div className={styles.lines}>
                             {line5Array.map((letter, index) => {
                                 return (
-                                    <motion.h1
+                                    <motion.h5
                                         key={index}
                                         className={styles.yellow}
                                         variants={letterVariant}
@@ -231,7 +266,7 @@ function LandingText({ landingIn }: { landingIn: boolean }) {
                                         >
                                             {letter}
                                         </span>
-                                    </motion.h1>
+                                    </motion.h5>
                                 );
                             })}
                         </motion.div>

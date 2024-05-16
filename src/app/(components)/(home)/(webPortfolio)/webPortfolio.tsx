@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import styles from "./webPortfolio.module.scss";
 import TechTextIcons from "../../(icons)/techTextIcons";
 import { LinkButton1, LinkButton2 } from "../../(buttons)/buttons";
+import memoMake_gif1 from "../../../../../public/homepage/memomake-gif-1.gif";
 import clippr_gif1 from "../../../../../public/homepage/homepage_clippr.gif";
 import clippr_gif2 from "../../../../../public/homepage/homepage_clippr2.gif";
 import clippr_gif3 from "../../../../../public/homepage/homepage_clippr3.gif";
@@ -205,10 +206,34 @@ const hangManPortfolio = {
     scrollBar: false,
 };
 
+const memmoMakePortfolio = {
+    name: "MemoMake",
+    headings: [
+        "WIP/Currently Building",
+        "Online Communal FlashCard Quizz Maker",
+        "Developed using raw SQL queries",
+    ],
+    techStack: [
+        ["Next.js", "TypeScript"],
+        ["SASS/SCSS", "Framer Motion"],
+        ["AuthJs", "PostgreSQL", "Neon"],
+    ],
+    gitLink: "https://github.com/AndrewCDang/MemoMake",
+    figures: [
+        {
+            caption: "Interactive flashcard set quizz",
+            image: <Image src={memoMake_gif1} alt="memoMake webapp image" />,
+        },
+    ],
+    scrollBar: false,
+};
+
 function WebPortfolio() {
     return (
         <section className={styles.portfolioContainer}>
             <section className={styles.portfolio}>
+                <PortfolioItem props={memmoMakePortfolio} />
+                <hr className={styles.hr}></hr>
                 <PortfolioItem props={clipprPortfolio} />
                 <hr className={styles.hr}></hr>
                 <PortfolioItem props={webPortfolio} />
