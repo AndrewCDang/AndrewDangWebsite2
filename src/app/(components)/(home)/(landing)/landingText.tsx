@@ -10,7 +10,10 @@ function LandingText({ landingIn }: { landingIn: boolean }) {
     const [scope3, animate3] = useAnimate();
     const [scope4, animate4] = useAnimate();
 
-    const line00 = "Hi`I'm`Andrew`Dang";
+    const lineStart = "Hi,`";
+    const lineStartArray = lineStart.split("");
+
+    const line00 = "I'm`Andrew`Dang,";
     const line00Array = line00.split("");
 
     const line0 = "I'm`a...";
@@ -26,13 +29,13 @@ function LandingText({ landingIn }: { landingIn: boolean }) {
     const line2 = "With`a`background`in";
     const line2Array = line2.split(""); //0.85
 
-    const line3 = "Architecture";
+    const line3 = "`Architecture`";
     const line3Array = line3.split("");
 
     const line4 = "and`I`like`to`create";
     const line4Array = line4.split("");
 
-    const line5 = "Art";
+    const line5 = "`Art";
     const line5Array = line5.split("");
 
     const letterVariant = {
@@ -60,22 +63,12 @@ function LandingText({ landingIn }: { landingIn: boolean }) {
             { delay: stagger(0.025) }
         );
 
-        animate2(
+        await animate2(
             "h5",
             { opacity: 1, rotate: 0, scale: 1 },
             { delay: stagger(0.01) }
         );
-        await animate3(
-            "h5",
-            { opacity: 1, rotate: 0, scale: 1 },
-            { delay: stagger(0.025) }
-        );
-        await animate4(
-            "h5",
-            { opacity: 1, rotate: 0, scale: 1 },
-            { delay: stagger(0.01) }
-        );
-        await animate4(
+        animate3(
             "h5",
             { opacity: 1, rotate: 0, scale: 1 },
             { delay: stagger(0.025) }
@@ -109,26 +102,53 @@ function LandingText({ landingIn }: { landingIn: boolean }) {
                 <div>
                     <div className={styles.linesContainer}>
                         <div ref={scope0} className={`${styles.lines}`}>
-                            {line00Array.map((letter, index) => {
-                                return (
-                                    <motion.h3
-                                        key={index}
-                                        variants={letterVariant}
-                                        initial="initial"
-                                    >
-                                        <span
-                                            style={{
-                                                opacity:
-                                                    line00Array[index] === "`"
-                                                        ? 0
-                                                        : 1,
-                                            }}
+                            <div className={styles.linesSection}>
+                                {lineStartArray.map((letter, index) => {
+                                    return (
+                                        <motion.h3
+                                            key={index}
+                                            variants={letterVariant}
+                                            initial="initial"
                                         >
-                                            {letter}
-                                        </span>
-                                    </motion.h3>
-                                );
-                            })}
+                                            <span
+                                                style={{
+                                                    opacity:
+                                                        lineStartArray[
+                                                            index
+                                                        ] === "`"
+                                                            ? 0
+                                                            : 1,
+                                                }}
+                                            >
+                                                {letter}
+                                            </span>
+                                        </motion.h3>
+                                    );
+                                })}
+                            </div>
+                            <div className={styles.linesSection}>
+                                {line00Array.map((letter, index) => {
+                                    return (
+                                        <motion.h3
+                                            key={index}
+                                            variants={letterVariant}
+                                            initial="initial"
+                                        >
+                                            <span
+                                                style={{
+                                                    opacity:
+                                                        line00Array[index] ===
+                                                        "`"
+                                                            ? 0
+                                                            : 1,
+                                                }}
+                                            >
+                                                {letter}
+                                            </span>
+                                        </motion.h3>
+                                    );
+                                })}
+                            </div>
                         </div>
                         <div ref={scope0b} className={`${styles.lines}`}>
                             {line0Array.map((letter, index) => {
@@ -151,125 +171,147 @@ function LandingText({ landingIn }: { landingIn: boolean }) {
                                     </motion.h3>
                                 );
                             })}
-                        </div>
-
-                        <div ref={scope} className={styles.lines}>
-                            {line1Array.map((letter, index) => {
-                                return (
-                                    <motion.h1
-                                        key={index}
-                                        className={`${styles.red}`}
-                                        variants={letterVariant}
-                                        initial="initial"
-                                    >
-                                        <span
-                                            style={{
-                                                opacity:
-                                                    line1Array[index] === "`"
-                                                        ? 0
-                                                        : 1,
-                                            }}
+                            <div ref={scope} className={styles.lines}>
+                                {line1Array.map((letter, index) => {
+                                    return (
+                                        <motion.h1
+                                            key={index}
+                                            className={`${styles.red}`}
+                                            variants={letterVariant}
+                                            initial="initial"
                                         >
-                                            {letter}
-                                        </span>
-                                    </motion.h1>
-                                );
-                            })}
-                        </div>
-                    </div>
-                    <div ref={scope2} className={styles.linesContainer}>
-                        <div className={styles.lines}>
-                            {line2Array.map((letter, index) => {
-                                return (
-                                    <motion.h5
-                                        key={index}
-                                        variants={letterVariant}
-                                        initial="initial"
-                                    >
-                                        <span
-                                            style={{
-                                                opacity:
-                                                    line2Array[index] === "`"
-                                                        ? 0
-                                                        : 1,
-                                            }}
+                                            <span
+                                                style={{
+                                                    opacity:
+                                                        line1Array[index] ===
+                                                        "`"
+                                                            ? 0
+                                                            : 1,
+                                                }}
+                                            >
+                                                {letter}
+                                            </span>
+                                        </motion.h1>
+                                    );
+                                })}
+                                <div
+                                    ref={scope2}
+                                    className={styles.linesContainer}
+                                >
+                                    <div className={styles.lines}>
+                                        {line2Array.map((letter, index) => {
+                                            return (
+                                                <motion.h5
+                                                    key={index}
+                                                    variants={letterVariant}
+                                                    initial="initial"
+                                                >
+                                                    <span
+                                                        style={{
+                                                            opacity:
+                                                                line2Array[
+                                                                    index
+                                                                ] === "`"
+                                                                    ? 0
+                                                                    : 1,
+                                                        }}
+                                                    >
+                                                        {letter}
+                                                    </span>
+                                                </motion.h5>
+                                            );
+                                        })}
+                                        {line3Array.map((letter, index) => {
+                                            return (
+                                                <motion.h5
+                                                    key={index}
+                                                    className={styles.blue}
+                                                    variants={letterVariant}
+                                                    initial="initial"
+                                                >
+                                                    <span
+                                                        style={{
+                                                            opacity:
+                                                                line3Array[
+                                                                    index
+                                                                ] === "`"
+                                                                    ? 0
+                                                                    : 1,
+                                                        }}
+                                                    >
+                                                        {letter}
+                                                    </span>
+                                                </motion.h5>
+                                            );
+                                        })}
+                                        <div
+                                            ref={scope3}
+                                            className={styles.linesContainer}
                                         >
-                                            {letter}
-                                        </span>
-                                    </motion.h5>
-                                );
-                            })}
+                                            <div className={styles.lines}>
+                                                {line4Array.map(
+                                                    (letter, index) => {
+                                                        return (
+                                                            <motion.h5
+                                                                key={index}
+                                                                variants={
+                                                                    letterVariant
+                                                                }
+                                                                initial="initial"
+                                                            >
+                                                                <span
+                                                                    style={{
+                                                                        opacity:
+                                                                            line4Array[
+                                                                                index
+                                                                            ] ===
+                                                                            "`"
+                                                                                ? 0
+                                                                                : 1,
+                                                                    }}
+                                                                >
+                                                                    {letter}
+                                                                </span>
+                                                            </motion.h5>
+                                                        );
+                                                    }
+                                                )}
+                                                {line5Array.map(
+                                                    (letter, index) => {
+                                                        return (
+                                                            <motion.h5
+                                                                key={index}
+                                                                className={
+                                                                    styles.yellow
+                                                                }
+                                                                variants={
+                                                                    letterVariant
+                                                                }
+                                                                initial="initial"
+                                                            >
+                                                                <span
+                                                                    style={{
+                                                                        opacity:
+                                                                            line5Array[
+                                                                                index
+                                                                            ] ===
+                                                                            "`"
+                                                                                ? 0
+                                                                                : 1,
+                                                                    }}
+                                                                >
+                                                                    {letter}
+                                                                </span>
+                                                            </motion.h5>
+                                                        );
+                                                    }
+                                                )}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div ref={scope3} className={styles.lines}>
-                            {line3Array.map((letter, index) => {
-                                return (
-                                    <motion.h5
-                                        key={index}
-                                        className={styles.blue}
-                                        variants={letterVariant}
-                                        initial="initial"
-                                    >
-                                        <span
-                                            style={{
-                                                opacity:
-                                                    line3Array[index] === "`"
-                                                        ? 0
-                                                        : 1,
-                                            }}
-                                        >
-                                            {letter}
-                                        </span>
-                                    </motion.h5>
-                                );
-                            })}
-                        </div>
-                    </div>
-                    <div ref={scope4} className={styles.linesContainer}>
-                        <div className={styles.lines}>
-                            {line4Array.map((letter, index) => {
-                                return (
-                                    <motion.h5
-                                        key={index}
-                                        variants={letterVariant}
-                                        initial="initial"
-                                    >
-                                        <span
-                                            style={{
-                                                opacity:
-                                                    line4Array[index] === "`"
-                                                        ? 0
-                                                        : 1,
-                                            }}
-                                        >
-                                            {letter}
-                                        </span>
-                                    </motion.h5>
-                                );
-                            })}
-                        </div>
-                        <motion.div className={styles.lines}>
-                            {line5Array.map((letter, index) => {
-                                return (
-                                    <motion.h5
-                                        key={index}
-                                        className={styles.yellow}
-                                        variants={letterVariant}
-                                        initial="initial"
-                                    >
-                                        <span
-                                            style={{
-                                                opacity:
-                                                    line5Array[index] === "`"
-                                                        ? 0
-                                                        : 1,
-                                            }}
-                                        >
-                                            {letter}
-                                        </span>
-                                    </motion.h5>
-                                );
-                            })}
-                        </motion.div>
                     </div>
                 </div>
             </div>
