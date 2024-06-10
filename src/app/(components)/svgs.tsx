@@ -336,6 +336,54 @@ export function Zustand() {
     return <img src={zustand} alt="zustand image" />;
 }
 
+const postSQL = "/svgs/postgresql-icon.svg";
+
+export function PostSQL() {
+    return <img src={postSQL} alt="postSQL image" />;
+}
+
+const neon = "/svgs/neon.png";
+
+export function Neon() {
+    return (
+        <img
+            style={{ height: "100%", aspectRatio: "1" }}
+            src={neon}
+            alt="neon image"
+        />
+    );
+}
+
+const authJs = "/svgs/authJs.webp";
+
+export function AuthJs() {
+    return (
+        <img
+            style={{ height: "100%", aspectRatio: "1" }}
+            src={authJs}
+            alt="authjs image"
+        />
+    );
+}
+
+const landingSVG1 = "/svgs/landing_svg1.svg";
+
+export function LandingSvg1() {
+    return <img src={landingSVG1} />;
+}
+
+const landingSVG2 = "/svgs/landing_svg2.svg";
+
+export function LandingSvg2() {
+    return <img src={landingSVG2} />;
+}
+
+const landingSVG3 = "/svgs/landing_svg3.svg";
+
+export function LandingSvg3() {
+    return <img src={landingSVG3} />;
+}
+
 export function React() {
     const styleB = {
         fill: "#00d8ff",

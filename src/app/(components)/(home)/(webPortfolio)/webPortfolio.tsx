@@ -97,7 +97,7 @@ const PortfolioItem = ({ props }: { props: PortfolioProps }) => {
 
 const clipprPortfolio = {
     name: "Clippr.",
-    headings: ["Barber Discovery and Booking App"],
+    headings: ["Personalised Barber Discovery and Booking App"],
     techStack: [
         ["Next.js", "TypeScript", "TailwindCSS"],
         ["Supabase", "Supabase Auth", "SQL"],
@@ -157,7 +157,7 @@ const webPortfolio = {
 
 const racketPortfolio = {
     name: "Racket Radar",
-    headings: ["Racket finder and matcher via user skill level"],
+    headings: ["Personalised Badminton Racket Finder/Matcher"],
     techStack: [
         ["React", "JavaScript", "CSS"],
         ["Node.js", "Express.js", "MongoDb"],
@@ -186,7 +186,7 @@ const racketPortfolio = {
 const hangManPortfolio = {
     name: "Hang Man",
     headings: [
-        "Interactive hang-man built in React",
+        "Interactive Hang-Man App Built in React",
         "Custom Animations and graphics",
     ],
     techStack: [["React", "JavaScript", "CSS"], ["Redux Toolkit"]],
@@ -209,8 +209,8 @@ const hangManPortfolio = {
 const memmoMakePortfolio = {
     name: "MemoMake",
     headings: [
-        "WIP/Currently Building",
-        "Online Communal FlashCard Quizz Maker",
+        "(WIP)",
+        "Online Shareable FlashCard Quizz Maker",
         "Developed using raw SQL queries",
     ],
     techStack: [
@@ -236,11 +236,11 @@ function WebPortfolio() {
                 <hr className={styles.hr}></hr>
                 <PortfolioItem props={clipprPortfolio} />
                 <hr className={styles.hr}></hr>
-                <PortfolioItem props={webPortfolio} />
-                <hr className={styles.hr}></hr>
                 <PortfolioItem props={racketPortfolio} />
                 <hr className={styles.hr}></hr>
                 <PortfolioItem props={hangManPortfolio} />
+                <hr className={styles.hr}></hr>
+                <PortfolioItem props={webPortfolio} />
             </section>
         </section>
     );

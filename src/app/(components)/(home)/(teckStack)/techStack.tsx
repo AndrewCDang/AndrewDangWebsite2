@@ -20,6 +20,9 @@ import {
     Zustand,
     React,
     Framer,
+    Neon,
+    PostSQL,
+    AuthJs,
 } from "../../svgs";
 
 function TechStack() {
@@ -40,11 +43,14 @@ function TechStack() {
         { node: <Nextjs />, name: "Next.js" },
         { node: <Tailwind />, name: "Tailwind" },
         { node: <Saas />, name: "Saas" },
-        { node: <Framer />, name: "Framer" },
-        { node: <Supabase />, name: "Supabase" },
-        { node: <MongoDb />, name: "MongoDb" },
+        { node: <Framer />, name: "Framer Motion" },
+        { node: <PostSQL />, name: "PostgresSQL" },
         { node: <Node />, name: "Node.js" },
         { node: <Express />, name: "Express.js" },
+        { node: <Neon />, name: "Neon" },
+        { node: <Supabase />, name: "Supabase" },
+        { node: <MongoDb />, name: "MongoDb" },
+        { node: <AuthJs />, name: "Auth.Js" },
         { node: <HookForm />, name: "React HookForm" },
         { node: <Zustand />, name: "Zustand" },
     ];

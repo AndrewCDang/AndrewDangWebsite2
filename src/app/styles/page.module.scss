@@ -215,14 +215,24 @@
         align-items: center;
     }
     .summaryContainer {
+        text-align: start;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 2rem;
         padding-top: 3rem;
         padding-bottom: 3rem;
         max-width: 800px;
         padding-left: 1rem;
         padding-right: 1rem;
+        .summaryLine {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            img {
+                height: 6rem;
+                aspect-ratio: 1;
+            }
+        }
     }
 }
 .glow {

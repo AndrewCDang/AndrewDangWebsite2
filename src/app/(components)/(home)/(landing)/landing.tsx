@@ -14,6 +14,9 @@ import {
     Circle,
     Triangle,
     RightArrow,
+    LandingSvg1,
+    LandingSvg2,
+    LandingSvg3,
 } from "../../../(components)/svgs";
 import LandingText from "./landingText";
 
@@ -179,18 +182,33 @@ function Landing({ otherInView }: { otherInView: any }) {
                         <h1>Web Apps</h1>
                         <h2>Portfolio</h2>
                         <div className={styles.summaryContainer}>
-                            <h6>
-                                I enjoy creating visually delightful and
-                                engaging user experiences
-                            </h6>
-                            <h6>
-                                I develop apps inspired by my hobbies, personal
-                                challenges, and productivity needs, gaining
-                                invaluable experience with various front-end and
-                                back-end technologies.
-                            </h6>
-                        </div>
+                            <div className={styles.summaryLine}>
+                                <LandingSvg1 />
+                                <h6>
+                                    As a developer with a design background, I
+                                    enjoy creating visually delightful and
+                                    engaging user experiences
+                                </h6>
+                            </div>
+                            <div className={styles.summaryLine}>
+                                <LandingSvg2 />
 
+                                <h6>
+                                    I keep up to date with latest industry
+                                    trends, and get inspired by award winning
+                                    websites.
+                                </h6>
+                            </div>
+                            <div className={styles.summaryLine}>
+                                <LandingSvg3 />
+                                <h6>
+                                    I develop apps inspired by my hobbies,
+                                    personal challenges, and productivity needs,
+                                    gaining invaluable experience with various
+                                    front-end and back-end technologies.
+                                </h6>
+                            </div>
+                        </div>
                         <div className={styles.glow}>
                             <div></div>
                         </div>
