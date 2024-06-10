@@ -184,11 +184,10 @@ function Landing({ otherInView }: { otherInView: any }) {
                                 engaging user experiences
                             </h6>
                             <h6>
-                                I create apps based on my hobbies, personal
-                                challenges, and productivity needs. These
-                                projects have given me invaluable experience
-                                with a wide range of front-end and back-end
-                                technologies.
+                                I develop apps inspired by my hobbies, personal
+                                challenges, and productivity needs, gaining
+                                invaluable experience with various front-end and
+                                back-end technologies.
                             </h6>
                         </div>
 
