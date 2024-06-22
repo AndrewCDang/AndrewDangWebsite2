@@ -216,7 +216,7 @@ const memmoMakePortfolio = {
     techStack: [
         ["Next.js", "TypeScript"],
         ["SASS/SCSS", "Framer Motion"],
-        ["AuthJs", "PostgreSQL", "Neon"],
+        ["Zod", "AuthJs", "PostgreSQL", "Neon"],
     ],
     gitLink: "https://github.com/AndrewCDang/MemoMake",
     figures: [

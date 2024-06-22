@@ -335,6 +335,10 @@ const zustand = "/svgs/zustand.svg";
 export function Zustand() {
     return <img src={zustand} alt="zustand image" />;
 }
+const zod = "./svgs/zod.svg";
+export function Zod() {
+    return <img src={zod} />;
+}
 
 const postSQL = "/svgs/postgresql-icon.svg";
 

@@ -17,7 +17,7 @@ import {
     Node,
     HookForm,
     Express,
-    Zustand,
+    Zod,
     React,
     Framer,
     Neon,
@@ -52,7 +52,7 @@ function TechStack() {
         { node: <MongoDb />, name: "MongoDb" },
         { node: <AuthJs />, name: "Auth.Js" },
         { node: <HookForm />, name: "React HookForm" },
-        { node: <Zustand />, name: "Zustand" },
+        { node: <Zod />, name: "Zod" },
     ];
 
     const containerVarients = {
