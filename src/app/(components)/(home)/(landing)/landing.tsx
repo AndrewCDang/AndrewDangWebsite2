@@ -184,29 +184,30 @@ function Landing({ otherInView }: { otherInView: any }) {
                         <div className={styles.summaryContainer}>
                             <div className={styles.summaryLine}>
                                 <LandingSvg1 />
-                                <h6>
+                                <p>
                                     As a developer with a design background, I
                                     enjoy creating visually delightful and
                                     engaging user experiences
-                                </h6>
+                                </p>
                             </div>
                             <div className={styles.summaryLine}>
                                 <LandingSvg2 />
-
-                                <h6>
+                                <p>
                                     I keep up to date with latest industry
-                                    trends, and get inspired by award winning
-                                    websites.
-                                </h6>
+                                    trends, drawing inspiration from
+                                    award-winning websites and technological
+                                    advancements.
+                                </p>
                             </div>
                             <div className={styles.summaryLine}>
                                 <LandingSvg3 />
-                                <h6>
-                                    I develop apps inspired by my hobbies,
-                                    personal challenges, and productivity needs,
-                                    gaining invaluable experience with various
-                                    front-end and back-end technologies.
-                                </h6>
+                                <p>
+                                    I enjoy problem-solving and learning new
+                                    libraries and software patterns/methods to
+                                    implement in my personal apps. I tackle
+                                    challenges from Great FrontEnd to gain top
+                                    industry techniques.
+                                </p>
                             </div>
                         </div>
                         <div className={styles.glow}>

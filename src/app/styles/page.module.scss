@@ -167,6 +167,10 @@
     display: flex;
     flex-wrap: wrap;
     width: fit-content;
+    .jobTitle {
+        font-size: clamp(1.6rem, calc(0.5rem + 5vw), 4.5rem);
+        line-height: clamp(1.6rem, calc(0.5rem + 5vw), 4.5rem);
+    }
 }
 .linesSection {
     display: flex;
@@ -224,12 +228,16 @@
         max-width: 800px;
         padding-left: 1rem;
         padding-right: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+
         .summaryLine {
             display: flex;
             align-items: center;
             gap: 1rem;
+            font-weight: 600;
             img {
-                height: 6rem;
+                height: clamp(3rem, calc(1rem + 3vw), 5rem);
                 aspect-ratio: 1;
             }
         }

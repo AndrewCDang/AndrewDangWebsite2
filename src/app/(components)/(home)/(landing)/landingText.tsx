@@ -10,29 +10,23 @@ function LandingText({ landingIn }: { landingIn: boolean }) {
     const [scope3, animate3] = useAnimate();
     const [scope4, animate4] = useAnimate();
 
-    const lineStart = "Hi,`";
-    const lineStartArray = lineStart.split("");
-
-    const line00 = "I'm`Andrew`Dang,";
+    const line00 = "Andrew`Dang";
     const line00Array = line00.split("");
 
-    const line0 = "I'm`a...";
-    const line0Array = line0.split("");
-
-    const line1 = "Web`Developer";
+    const line1 = "Full`Stack`Developer";
     const line1Array = line1.split(""); //0.35
 
     const line1b =
         "I`m`passionate`about`creating`visually`engaging`web`apps`with`delightful`user`experiences`";
     const line1bArray = line1.split(""); //0.35
 
-    const line2 = "With`a`background`in";
+    const line2 = "Background`in";
     const line2Array = line2.split(""); //0.85
 
     const line3 = "`Architecture`";
     const line3Array = line3.split("");
 
-    const line4 = "and`I`like`to`create";
+    const line4 = "and";
     const line4Array = line4.split("");
 
     const line5 = "`Art";
@@ -52,11 +46,7 @@ function LandingText({ landingIn }: { landingIn: boolean }) {
             { opacity: 1, rotate: 0, scale: 1 },
             { delay: stagger(0.01) }
         );
-        await animate0b(
-            "h3",
-            { opacity: 1, rotate: 0, scale: 1 },
-            { delay: stagger(0.01) }
-        );
+
         await animate(
             "h1",
             { opacity: 1, rotate: 0, scale: 1 },
@@ -103,30 +93,6 @@ function LandingText({ landingIn }: { landingIn: boolean }) {
                     <div className={styles.linesContainer}>
                         <div ref={scope0} className={`${styles.lines}`}>
                             <div className={styles.linesSection}>
-                                {lineStartArray.map((letter, index) => {
-                                    return (
-                                        <motion.h3
-                                            key={index}
-                                            variants={letterVariant}
-                                            initial="initial"
-                                        >
-                                            <span
-                                                style={{
-                                                    opacity:
-                                                        lineStartArray[
-                                                            index
-                                                        ] === "`"
-                                                            ? 0
-                                                            : 1,
-                                                }}
-                                            >
-                                                {letter}
-                                            </span>
-                                        </motion.h3>
-                                    );
-                                })}
-                            </div>
-                            <div className={styles.linesSection}>
                                 {line00Array.map((letter, index) => {
                                     return (
                                         <motion.h3
@@ -151,32 +117,12 @@ function LandingText({ landingIn }: { landingIn: boolean }) {
                             </div>
                         </div>
                         <div ref={scope0b} className={`${styles.lines}`}>
-                            {line0Array.map((letter, index) => {
-                                return (
-                                    <motion.h3
-                                        key={index}
-                                        variants={letterVariant}
-                                        initial="initial"
-                                    >
-                                        <span
-                                            style={{
-                                                opacity:
-                                                    line0Array[index] === "`"
-                                                        ? 0
-                                                        : 1,
-                                            }}
-                                        >
-                                            {letter}
-                                        </span>
-                                    </motion.h3>
-                                );
-                            })}
                             <div ref={scope} className={styles.lines}>
                                 {line1Array.map((letter, index) => {
                                     return (
                                         <motion.h1
                                             key={index}
-                                            className={`${styles.red}`}
+                                            className={`${styles.jobTitle} ${styles.red}`}
                                             variants={letterVariant}
                                             initial="initial"
                                         >
