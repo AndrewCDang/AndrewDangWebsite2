@@ -194,8 +194,8 @@ function Landing({ otherInView }: { otherInView: any }) {
                                 <LandingSvg2 />
                                 <p>
                                     I keep up to date with latest industry
-                                    trends, drawing inspiration from
-                                    award-winning websites and technological
+                                    trends, drawing inspiration from leading
+                                    creative developers and technological
                                     advancements.
                                 </p>
                             </div>
@@ -204,10 +204,11 @@ function Landing({ otherInView }: { otherInView: any }) {
                                 <p>
                                     I enjoy problem-solving and learning new
                                     libraries and software patterns/methods to
-                                    implement in my personal apps. I tackle
-                                    challenges from Great FrontEnd to gain top
-                                    industry techniques.
+                                    implement in my personal apps.
                                 </p>
+                                {/* I tackle
+                                    challenges from Great FrontEnd to gain top
+                                    industry techniques. */}
                             </div>
                         </div>
                         <div className={styles.glow}>

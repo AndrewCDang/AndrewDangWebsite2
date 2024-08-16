@@ -17,6 +17,7 @@ import hangman_gif2 from "../../../../../public/homepage/homepage_hangman2.gif";
 import portfolio_gif from "../../../../../public/homepage/homepage-portfolio.gif";
 
 import Image from "next/image";
+import FlashmuVideo from "./assets/flashmuVideo";
 
 type PortfolioProps = {
     name: string;
@@ -24,8 +25,9 @@ type PortfolioProps = {
     techStack: Array<string[]>;
     gitLink: string;
     webLink?: string;
-    figures: { caption: string; image: ReactNode }[];
+    figures?: { caption: string; image: ReactNode }[] | null;
     scrollBar: boolean;
+    video?: { caption: string; video: ReactNode } | null;
 };
 
 const PortfolioItem = ({ props }: { props: PortfolioProps }) => {
@@ -58,36 +60,45 @@ const PortfolioItem = ({ props }: { props: PortfolioProps }) => {
                             })}
                         </div>
                     </div>
-                    {/* Images */}
-                    <div
-                        className={`${styles.portfolioImageContainer} ${
-                            props.scrollBar && styles.scrollBar
-                        }`}
-                    >
-                        {props.figures.map((item, i) => {
-                            return (
-                                <div
-                                    key={i}
-                                    className={`${styles.portfolioImage}`}
-                                >
-                                    <div className={styles.imageItem}>
-                                        {item.image}
-                                        <small>{item.caption}</small>
+                    {props.figures && (
+                        <div
+                            className={`${styles.portfolioImageContainer} ${
+                                props.scrollBar && styles.scrollBar
+                            }`}
+                        >
+                            {props.figures.map((item, i) => {
+                                return (
+                                    <div
+                                        key={i}
+                                        className={`${styles.portfolioImage}`}
+                                    >
+                                        <div className={styles.imageItem}>
+                                            {item.image}
+                                            <small>{item.caption}</small>
+                                        </div>
                                     </div>
-                                </div>
-                            );
-                        })}
-                    </div>
+                                );
+                            })}
+                        </div>
+                    )}
+                    {props.video && (
+                        <div className={styles.videoContainer}>
+                            {props.video.video}
+                        </div>
+                    )}
                 </section>
 
                 {/* Buttons */}
                 <div className={styles.linksContainer}>
                     <LinkButton2 text="Code" link={props.gitLink} />
-                    {props.webLink && (
+                    {props.webLink && props.webLink !== "soon" && (
                         <LinkButton1
                             text="Visit Website"
                             link={props.webLink}
                         />
+                    )}
+                    {props.webLink && props.webLink === "soon" && (
+                        <div className={styles.soon}>Deploying Soon</div>
                     )}
                 </div>
             </div>
@@ -207,24 +218,24 @@ const hangManPortfolio = {
 };
 
 const memmoMakePortfolio = {
-    name: "MemoMake",
+    name: "Flashmu",
     headings: [
-        "(WIP)",
-        "Online Shareable FlashCard Quizz Maker",
-        "Developed using raw SQL queries",
+        "- Online Communual FlashCard Quizz Maker and Tester",
+        "- Inspired by Anki and Notion",
+        "- Backend/database utilising SQL joins, aggregate functions, CTEs and more",
     ],
     techStack: [
         ["Next.js", "TypeScript"],
         ["SASS/SCSS", "Framer Motion"],
-        ["Zod", "AuthJs", "PostgreSQL", "Neon"],
+        ["Zod", "AuthJs", "PostgreSQL", "Neon", "PostgresJs"],
     ],
     gitLink: "https://github.com/AndrewCDang/MemoMake",
-    figures: [
-        {
-            caption: "Interactive flashcard set quizz",
-            image: <Image src={memoMake_gif1} alt="memoMake webapp image" />,
-        },
-    ],
+    webLink: "soon",
+    video: {
+        caption: "Interactive flashcard set quizz",
+        video: <FlashmuVideo />,
+    },
+
     scrollBar: false,
 };
 
