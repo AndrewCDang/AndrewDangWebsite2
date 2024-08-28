@@ -218,7 +218,7 @@ const hangManPortfolio = {
 };
 
 const memmoMakePortfolio = {
-    name: "Flashmu",
+    name: "Quizmu",
     headings: [
         "- Online Communual FlashCard Quizz Maker and Tester",
         "- Inspired by Anki and Notion",
@@ -226,11 +226,11 @@ const memmoMakePortfolio = {
     ],
     techStack: [
         ["Next.js", "TypeScript"],
-        ["SASS/SCSS", "Framer Motion"],
-        ["Zod", "AuthJs", "PostgreSQL", "Neon", "PostgresJs"],
+        ["SASS/SCSS Modules", "Framer Motion"],
+        ["Zod", "AuthJs", "PostgreSQL", "Neon", "PostgresJs", "Cloudinary"],
     ],
     gitLink: "https://github.com/AndrewCDang/MemoMake",
-    webLink: "soon",
+    webLink: "https://www.quizmu.com/",
     video: {
         caption: "Interactive flashcard set quizz",
         video: <FlashmuVideo />,
