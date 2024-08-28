@@ -223,6 +223,7 @@ const memmoMakePortfolio = {
         "- Online Communual FlashCard Quizz Maker and Tester",
         "- Inspired by Anki and Notion",
         "- Backend/database utilising SQL joins, aggregate functions, CTEs and more",
+        "- Implementing caching for fetch requests with on-demand revalidation",
     ],
     techStack: [
         ["Next.js", "TypeScript"],
