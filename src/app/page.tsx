@@ -10,7 +10,15 @@ import Landing from "./(components)/(home)/(landing)/landing";
 
 export default function Home() {
     const otherRef = useRef(null);
-    const otherInView = useInView(otherRef, { amount: 0.2 });
+    const otherInView = useInView(otherRef, {
+        amount: 0.1,
+        margin: "400px 0px 0px 0px",
+    });
+    const webPortfolioRef = useRef(null);
+    const webPortfolioInView = useInView(webPortfolioRef, { amount: 0.1 });
+    const techStackRef = useRef(null);
+    const techStackInView = useInView(techStackRef, { amount: 0.1 });
+
     const portfolioRef = useRef(null);
     const { scrollYProgress: otherScrollProgress } = useScroll({
         target: portfolioRef,
@@ -18,8 +26,12 @@ export default function Home() {
 
     return (
         <main className={styles.main}>
-            <Landing otherInView={otherInView} />
-            <WebPortfolio />
+            <Landing
+                otherInView={otherInView}
+                webPortfolioInView={webPortfolioInView}
+                techStackInView={techStackInView}
+            />
+            <WebPortfolio webPortfolioRef={webPortfolioRef} />
             <section ref={portfolioRef} className={styles.other}>
                 <motion.div
                     animate={{
@@ -28,7 +40,7 @@ export default function Home() {
                     }}
                     transition={{ delay: 0.25 }}
                 >
-                    <TechStack />
+                    <TechStack techStackRef={techStackRef} />
                 </motion.div>
                 <div ref={otherRef}>
                     <OtherWorks scrollYProgress={otherScrollProgress} />

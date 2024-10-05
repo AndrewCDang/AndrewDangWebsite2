@@ -205,6 +205,13 @@
     align-items: center;
     top: 15rem;
     padding-top: 15rem;
+    @include breakpoint-mobile {
+        @media (hover: none) and (pointer: coarse) {
+            /* ... */
+
+            padding-top: 12rem;
+        }
+    }
 }
 
 .title {

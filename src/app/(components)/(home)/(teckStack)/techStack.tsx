@@ -1,7 +1,7 @@
 import style from "./techStack.module.scss";
 
 import { useInView, motion, delay } from "framer-motion";
-import { ReactNode, useRef } from "react";
+import { ReactNode, RefObject, useRef } from "react";
 
 import {
     Javascript,
@@ -25,7 +25,11 @@ import {
     AuthJs,
 } from "../../svgs";
 
-function TechStack() {
+function TechStack({
+    techStackRef,
+}: {
+    techStackRef: RefObject<HTMLDivElement>;
+}) {
     const techRef = useRef(null);
 
     const isInView = useInView(techRef, { once: true, amount: 0.3 });
@@ -77,7 +81,7 @@ function TechStack() {
     };
 
     return (
-        <section className={style.container}>
+        <section ref={techStackRef} className={style.container}>
             <h1>Tech Stack</h1>
             <motion.ul
                 // variants={containerVarients}

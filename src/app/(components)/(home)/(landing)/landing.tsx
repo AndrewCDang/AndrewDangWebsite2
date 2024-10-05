@@ -20,13 +20,26 @@ import {
 } from "../../../(components)/svgs";
 import LandingText from "./landingText";
 
-function Landing({ otherInView }: { otherInView: any }) {
+function Landing({
+    otherInView,
+    webPortfolioInView,
+    techStackInView,
+}: {
+    otherInView: boolean;
+    webPortfolioInView: boolean;
+    techStackInView: boolean;
+}) {
     const svgArrays = [
         <Square key={0} />,
         <Triangle key={1} />,
         <Circle key={2} />,
     ];
-    const webRef = useRef(null);
+    const introRef = useRef(null);
+    const introInView = useInView(introRef, {
+        amount: 0.5,
+        margin: "400px 0px 0px 0px",
+    });
+
     const landingRef = useRef(null);
     const [widthStart, setWidthStart] = useState("50%");
     const [leftStart, setLeftStart] = useState("50%");
@@ -36,7 +49,6 @@ function Landing({ otherInView }: { otherInView: any }) {
     const { scrollYProgress } = useScroll({
         target: landingRef,
     });
-    const webPortfolioInView = useInView(webRef);
 
     const backgroundTransform = useTransform(
         scrollYProgress,
@@ -139,7 +151,6 @@ function Landing({ otherInView }: { otherInView: any }) {
                 options={{ lerp: webPortfolioInView ? 0.1 : 10 }}
             ></ReactLenis> */}
             <motion.div
-                ref={webRef}
                 style={{
                     backgroundSize: backgroundTransform,
                     opacity: backgroundOpacity,
@@ -165,6 +176,9 @@ function Landing({ otherInView }: { otherInView: any }) {
                                 <LandingIntro
                                     scrollYProgress={scrollYProgress}
                                     otherInView={otherInView}
+                                    webPortfolioInView={webPortfolioInView}
+                                    techStackInView={techStackInView}
+                                    introInView={introInView}
                                     index={i}
                                     containerWidth={containerWidth}
                                 >
@@ -176,7 +190,7 @@ function Landing({ otherInView }: { otherInView: any }) {
                 </motion.div>
             </div>
 
-            <aside className={styles.bottomContainer}>
+            <aside ref={introRef} className={styles.bottomContainer}>
                 <div className={styles.title}>
                     <div>
                         <h1>Web Apps</h1>

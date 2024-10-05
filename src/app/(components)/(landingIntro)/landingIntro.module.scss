@@ -10,6 +10,31 @@
         fill: $col-blue;
     }
 }
+.desktopIcon {
+    @media (hover: none) and (pointer: coarse) {
+        display: none;
+        /* ... */
+    }
+}
+
+.mobileIcon {
+    display: none;
+    @media (hover: none) and (pointer: coarse) {
+        display: block;
+        /* ... */
+    }
+}
+.mobileBg {
+    position: fixed;
+    height: 100lvh;
+    width: calc(100vw + 2.5rem);
+    background: $col-black;
+    display: none;
+    @media (hover: none) and (pointer: coarse) {
+        display: block;
+        /* ... */
+    }
+}
 
 .icon {
     width: 5rem !important;

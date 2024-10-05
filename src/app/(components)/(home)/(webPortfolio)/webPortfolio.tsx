@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { MutableRefObject, ReactNode, RefObject } from "react";
 import styles from "./webPortfolio.module.scss";
 import TechTextIcons from "../../(icons)/techTextIcons";
 import { LinkButton1, LinkButton2 } from "../../(buttons)/buttons";
@@ -18,12 +18,13 @@ import portfolio_gif from "../../../../../public/homepage/homepage-portfolio.gif
 
 import Image from "next/image";
 import FlashmuVideo from "./assets/flashmuVideo";
+import ExhibitsVideo from "./assets/exhibitsVideo";
 
 type PortfolioProps = {
     name: string;
     headings: string[];
     techStack: Array<string[]>;
-    gitLink: string;
+    gitLink?: string;
     webLink?: string;
     figures?: { caption: string; image: ReactNode }[] | null;
     scrollBar: boolean;
@@ -90,7 +91,9 @@ const PortfolioItem = ({ props }: { props: PortfolioProps }) => {
 
                 {/* Buttons */}
                 <div className={styles.linksContainer}>
-                    <LinkButton2 text="Code" link={props.gitLink} />
+                    {props.gitLink && (
+                        <LinkButton2 text="Code" link={props.gitLink} />
+                    )}
                     {props.webLink && props.webLink !== "soon" && (
                         <LinkButton1
                             text="Visit Website"
@@ -240,10 +243,36 @@ const memmoMakePortfolio = {
     scrollBar: false,
 };
 
-function WebPortfolio() {
+const exhibitionPortfolio = {
+    name: "Exhibits",
+    headings: [
+        "Freelance project as a web designer/developer for ‘Exhibits’ App, enabling users to explore exhibitions by venue, exhibit, category, and artist (work in progress).",
+    ],
+    techStack: [
+        ["Next.js", "TypeScript"],
+        ["TailwindCSS", "ShadCn"],
+        ["Django"],
+    ],
+    // gitLink: "https://github.com/AndrewCDang/Exhibition",
+    // webLink: "https://exhibition.andrewcdang.com/",
+    video: {
+        caption: "Exhibits website",
+        video: <ExhibitsVideo />,
+    },
+
+    scrollBar: false,
+};
+
+function WebPortfolio({
+    webPortfolioRef,
+}: {
+    webPortfolioRef: RefObject<HTMLDivElement>;
+}) {
     return (
-        <section className={styles.portfolioContainer}>
+        <section ref={webPortfolioRef} className={styles.portfolioContainer}>
             <section className={styles.portfolio}>
+                <PortfolioItem props={exhibitionPortfolio} />
+                <hr className={styles.hr}></hr>
                 <PortfolioItem props={memmoMakePortfolio} />
                 <hr className={styles.hr}></hr>
                 <PortfolioItem props={clipprPortfolio} />

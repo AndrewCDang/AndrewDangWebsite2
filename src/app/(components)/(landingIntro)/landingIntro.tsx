@@ -15,12 +15,18 @@ import {
 
 function LandingIntro({
     otherInView,
+    webPortfolioInView,
+    techStackInView,
+    introInView,
     scrollYProgress,
     children,
     index,
     containerWidth,
 }: {
     otherInView: boolean;
+    webPortfolioInView: boolean;
+    techStackInView: boolean;
+    introInView: boolean;
     scrollYProgress: any;
     children: ReactNode;
     index: number;
@@ -53,6 +59,7 @@ function LandingIntro({
     );
 
     const rotate = useTransform(scrollYProgress, [0, 1], [`0deg`, `360deg`]);
+    const mobileBgTransform = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
     const scaleSquare = useTransform(
         scrollYProgress,
@@ -309,63 +316,141 @@ function LandingIntro({
     return (
         <>
             {index === 0 ? (
-                <motion.div
-                    animate={{
-                        opacity: [0, 1],
-                    }}
-                    transition={{ duration: 0.3, delay: 0.35 }}
-                >
+                <>
                     <motion.div
-                        style={{
-                            left: moveLeft,
-                            width: "100vw",
+                        animate={{
+                            opacity: [0, 1],
                         }}
-                        className={`${styles.container}`}
+                        className={`${styles.desktopIcon}`}
+                        transition={{ duration: 0.3, delay: 0.35 }}
                     >
                         <motion.div
-                            className={`${styles.iconContainer}`}
                             style={{
-                                top: moveTop,
-                                transform: position,
-                                zIndex: z1,
-                                width: scaleSquare,
-                                height: scaleHeight,
+                                left: moveLeft,
+                                width: "100vw",
                             }}
+                            className={`${styles.container}`}
                         >
                             <motion.div
+                                className={`${styles.iconContainer}`}
                                 style={{
-                                    // filter: blurArray[index],
-                                    height: "100%",
+                                    top: moveTop,
+                                    transform: position,
+                                    zIndex: z1,
+                                    width: scaleSquare,
+                                    height: scaleHeight,
                                 }}
-                                animate={{
-                                    scale: [0.5, 10, 1],
-                                }}
-                                transition={{ type: "spring", stiffness: 300 }}
                             >
                                 <motion.div
                                     style={{
+                                        // filter: blurArray[index],
                                         height: "100%",
-                                        transform: `translateX(-500px)`,
-                                        backgroundColor: scrollColour,
                                     }}
                                     animate={{
-                                        opacity: otherInView ? 0 : 1,
-                                        transform: otherInView
-                                            ? "translateY(-100%) scale(0.5)"
-                                            : "translateY(0%) scale(1)",
-                                        backgroundColor: "rgb(255, 86, 120)",
+                                        scale: [0.5, 10, 1],
                                     }}
                                     transition={{
                                         type: "spring",
-                                        bounce: 0.1,
+                                        stiffness: 300,
                                     }}
                                 >
-                                    <motion.div>{children}</motion.div>
+                                    <motion.div
+                                        style={{
+                                            height: "100%",
+                                            transform: `translateX(-500px)`,
+                                            backgroundColor: scrollColour,
+                                        }}
+                                        animate={{
+                                            opacity: otherInView ? 0 : 1,
+                                            transform: otherInView
+                                                ? "translateY(-100%) scale(0.5)"
+                                                : "translateY(0%) scale(1)",
+                                            backgroundColor:
+                                                "rgb(255, 86, 120)",
+                                        }}
+                                        transition={{
+                                            type: "spring",
+                                            bounce: 0.1,
+                                        }}
+                                    >
+                                        <motion.div>{children}</motion.div>
+                                    </motion.div>
                                 </motion.div>
                             </motion.div>
                         </motion.div>
                     </motion.div>
-                </motion.div>
+                    <motion.div
+                        className={`${styles.mobileIcon} ${styles.mobileBg}`}
+                        animate={{
+                            translateY:
+                                webPortfolioInView ||
+                                introInView ||
+                                techStackInView
+                                    ? 0
+                                    : `${otherInView ? "-100%" : "100%"}`,
+                        }}
+                        transition={{
+                            ease: [0.075, 0.82, 0.165, 1],
+                            duration: 1,
+                        }}
+                    ></motion.div>
+                    <motion.div
+                        animate={{
+                            opacity: [0, 1],
+                        }}
+                        transition={{
+                            duration: 0.3,
+                            delay: index === 0 ? 0.7 : index === 1 ? 1.175 : 2,
+                        }}
+                        className={`${styles.mobileIcon}`}
+                    >
+                        <motion.div
+                            style={{
+                                scale: scaleArray[index + 2],
+                                left: "50%",
+                            }}
+                            className={`${styles.container}`}
+                        >
+                            <motion.div
+                                className={`${styles.iconContainer}`}
+                                style={{
+                                    top: "50%",
+                                    transform: position,
+                                    zIndex: z1,
+                                }}
+                            >
+                                <motion.div
+                                    style={{
+                                        scaleX: scaleX,
+                                        scaleY: scaleY,
+                                        // filter: blurArray[index],
+                                        rotate: rotate,
+                                    }}
+                                    className={`${styles.icon}`}
+                                >
+                                    <motion.div
+                                        animate={{
+                                            scale: [0.5, 10, 1],
+                                        }}
+                                        transition={{
+                                            type: "spring",
+                                            stiffness: 500,
+                                            delay: index * 0.4,
+                                        }}
+                                        style={{
+                                            backgroundColor:
+                                                index === 0
+                                                    ? "rgb(255, 86, 120)"
+                                                    : "",
+                                        }}
+                                    >
+                                        {children}
+                                    </motion.div>
+                                </motion.div>
+                            </motion.div>
+                        </motion.div>
+                    </motion.div>
+                </>
             ) : (
                 <motion.div
                     animate={{
