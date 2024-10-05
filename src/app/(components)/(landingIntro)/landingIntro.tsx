@@ -381,6 +381,7 @@ function LandingIntro({
                     </motion.div>
                     <motion.div
                         className={`${styles.mobileIcon} ${styles.mobileBg}`}
+                        initial={{ translateY: "100%" }}
                         animate={{
                             translateY:
                                 webPortfolioInView ||
