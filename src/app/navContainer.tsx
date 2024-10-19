@@ -8,13 +8,12 @@ const NavBar = ({ children }: { children: React.ReactNode }) => {
     const [lastScrollY, setLastScrollY] = useState(0);
 
     const controlNavbar = () => {
-        // Get current scroll position
         const currentScrollY = window.scrollY;
 
-        // Check if the user is scrolling down or up
-        if (currentScrollY > lastScrollY) {
-            setIsVisible(false); // Hide navbar when scrolling down
-        } else {
+        // Only hide navbar if the user scrolls down more than 24px
+        if (currentScrollY > lastScrollY && currentScrollY > 24) {
+            setIsVisible(false); // Hide navbar when scrolling down past threshold
+        } else if (currentScrollY < lastScrollY) {
             setIsVisible(true); // Show navbar when scrolling up
         }
 
@@ -23,10 +22,7 @@ const NavBar = ({ children }: { children: React.ReactNode }) => {
     };
 
     useEffect(() => {
-        // Add scroll event listener
         window.addEventListener("scroll", controlNavbar);
-
-        // Clean up event listener on unmount
         return () => {
             window.removeEventListener("scroll", controlNavbar);
         };
