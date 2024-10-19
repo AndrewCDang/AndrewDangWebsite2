@@ -252,7 +252,7 @@ const memmoMakePortfolio = {
 const exhibitionPortfolio = {
     name: "Exhibits",
     headings: [
-        "• Freelance website for for ‘Exhibits’ App, enabling users to explore exhibitions by venue, exhibit, category, and artist in London",
+        "• Freelance website for for ‘Exhibits’ App (WIP), enabling users to explore exhibitions by venue, exhibit, category, and artist in London",
         "• Served as both designer and developer, adapting designs from the existing mobile app and branding to create a cohesive and visually engaging website",
     ],
     techStack: [
