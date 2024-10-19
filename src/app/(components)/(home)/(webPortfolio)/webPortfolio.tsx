@@ -40,9 +40,11 @@ const PortfolioItem = ({ props }: { props: PortfolioProps }) => {
                     <div>
                         <div>
                             <h2 className={styles.projectName}>{props.name}</h2>
-                            {props.headings.map((item, i) => {
-                                return <p key={i}>{item}</p>;
-                            })}
+                            <div className={styles.subtitles}>
+                                {props.headings.map((item, i) => {
+                                    return <p key={i}>{item}</p>;
+                                })}
+                            </div>
                         </div>
                         <div className={styles.techStack}>
                             {props.techStack.map((items, i) => {
@@ -111,7 +113,9 @@ const PortfolioItem = ({ props }: { props: PortfolioProps }) => {
 
 const clipprPortfolio = {
     name: "Clippr.",
-    headings: ["Personalised Barber Discovery and Booking App"],
+    headings: [
+        "Personalised Barber Discovery and Booking App based on ethnicity and venue type",
+    ],
     techStack: [
         ["Next.js", "TypeScript", "TailwindCSS"],
         ["Supabase", "Supabase Auth", "SQL"],
@@ -171,7 +175,9 @@ const webPortfolio = {
 
 const racketPortfolio = {
     name: "Racket Radar",
-    headings: ["Personalised Badminton Racket Finder/Matcher"],
+    headings: [
+        "Personalised badminton racket finder and matcher based on skill level and user preferences",
+    ],
     techStack: [
         ["React", "JavaScript", "CSS"],
         ["Node.js", "Express.js", "MongoDb"],
@@ -200,8 +206,8 @@ const racketPortfolio = {
 const hangManPortfolio = {
     name: "Hang Man",
     headings: [
-        "Interactive Hang-Man App Built in React",
-        "Custom Animations and graphics",
+        "•Interactive Hang-Man App Built in React",
+        "•Custom Animations and graphics",
     ],
     techStack: [["React", "JavaScript", "CSS"], ["Redux Toolkit"]],
     gitLink: "https://github.com/AndrewCDang/HangMan",
@@ -223,10 +229,10 @@ const hangManPortfolio = {
 const memmoMakePortfolio = {
     name: "Quizmu",
     headings: [
-        "- Online Communual FlashCard Quizz Maker and Tester",
-        "- Inspired by Anki and Notion",
-        "- Backend/database utilising SQL joins, aggregate functions, CTEs and more",
-        "- Implementing caching for fetch requests with on-demand revalidation",
+        "• Online Communual FlashCard Quizz Maker and Tester",
+        "• View and edit collection in dashboard, create cards in tables ",
+        "• Backend/database utilising SQL joins, aggregate functions, CTEs and more",
+        "• Implementing caching for fetch requests with on-demand revalidation",
     ],
     techStack: [
         ["Next.js", "TypeScript"],
@@ -246,10 +252,12 @@ const memmoMakePortfolio = {
 const exhibitionPortfolio = {
     name: "Exhibits",
     headings: [
-        "Freelance project as a web designer/developer for ‘Exhibits’ App, enabling users to explore exhibitions by venue, exhibit, category, and artist (work in progress).",
+        "• Freelance website for for ‘Exhibits’ App, enabling users to explore exhibitions by venue, exhibit, category, and artist in London",
+        "• Served as both designer and developer, adapting designs from the existing mobile app and branding to create a cohesive and visually engaging website",
     ],
     techStack: [
         ["Next.js", "TypeScript"],
+        ["React Query"],
         ["TailwindCSS", "ShadCn"],
         ["Django"],
     ],

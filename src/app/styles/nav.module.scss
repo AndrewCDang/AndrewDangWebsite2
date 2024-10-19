@@ -6,7 +6,6 @@
     @include gridBox;
     width: 100%;
     max-width: unset;
-    position: fixed;
     z-index: 100;
     & > section {
         grid-column: 2/-2;
@@ -33,6 +32,7 @@
 .sectionContent {
     z-index: 20;
     display: flex;
+    grid-column: span 2;
     justify-content: flex-end;
     & > div {
         display: flex;

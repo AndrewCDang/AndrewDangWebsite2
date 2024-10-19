@@ -56,44 +56,14 @@ function Nav() {
         };
     });
 
-    // Params
-    const path = usePathname();
-    const [pathName, setPathName] = useState<string>("");
-
-    const [scope, animate] = useAnimate();
-
-    const resetAnimation = async () => {
-        await animate("p", { y: 0 });
-    };
-
-    const constHandleAnimate = async (path: string) => {
-        await animate("p", { y: -100 });
-
-        setPathName(path.slice(1));
-        await resetAnimation();
-    };
-
-    useEffect(() => {
-        constHandleAnimate(path);
-    }, [path]);
-
     return (
-        <nav className={styles.navBar}>
+        <section className={styles.navBar}>
             <section>
                 <Link href={"/"}>
                     <div className={styles.logo}>
                         <Logo />
                     </div>
                 </Link>
-                <div ref={scope}>
-                    <motion.p
-                        className={styles.title}
-                        animate={{ opacity: 1 }}
-                        initial={{ opacity: 0 }}
-                    >
-                        {pathName}
-                    </motion.p>
-                </div>
                 <section className={styles.sectionContent}>
                     <div>
                         <Link href={"/"}>
@@ -151,7 +121,7 @@ function Nav() {
                     </div>
                 </motion.aside>
             </section>
-        </nav>
+        </section>
     );
 }
 

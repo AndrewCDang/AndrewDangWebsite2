@@ -18,7 +18,7 @@ function ExhibitsVideo() {
                     playsInline
                 >
                     <source
-                        src={"/homepage/exhibits_video.mp4"}
+                        src={"/homepage/exhibits_video_3.mp4"}
                         type="video/mp4"
                     />
                     Your browser does not support the video tag.
