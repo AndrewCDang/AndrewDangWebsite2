@@ -19,8 +19,9 @@ import portfolio_gif from "../../../../../public/homepage/homepage-portfolio.gif
 import Image from "next/image";
 import FlashmuVideo from "./assets/flashmuVideo";
 import ExhibitsVideo from "./assets/exhibitsVideo";
+import PortfolioCarousel from "./portfolioCarousel";
 
-type PortfolioProps = {
+export type PortfolioProps = {
     name: string;
     headings: string[];
     techStack: Array<string[]>;
@@ -64,11 +65,7 @@ const PortfolioItem = ({ props }: { props: PortfolioProps }) => {
                         </div>
                     </div>
                     {props.figures && (
-                        <div
-                            className={`${styles.portfolioImageContainer} ${
-                                props.scrollBar && styles.scrollBar
-                            }`}
-                        >
+                        <PortfolioCarousel data={props}>
                             {props.figures.map((item, i) => {
                                 return (
                                     <div
@@ -82,7 +79,7 @@ const PortfolioItem = ({ props }: { props: PortfolioProps }) => {
                                     </div>
                                 );
                             })}
-                        </div>
+                        </PortfolioCarousel>
                     )}
                     {props.video && (
                         <div className={styles.videoContainer}>
