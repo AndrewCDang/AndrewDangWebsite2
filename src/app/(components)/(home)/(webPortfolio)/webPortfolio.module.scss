@@ -44,15 +44,31 @@
     z-index: 10;
     width: fit-content;
     margin: 0rem 1rem;
-    border: 1px solid rgba($col-white, 0.5);
 
+    .videoContainer,
+    .portfolioImage {
+        max-width: 400px;
+        margin: 0 auto;
+    }
     .content {
         display: grid;
-        gap: 1rem;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 3rem;
+        grid-template-columns: 1fr 1fr;
+        @mixin mobileTabletLayout {
+            & div:first-child {
+                order: 2;
+            }
+            grid-template-columns: 1fr;
+            .videoContainer {
+                margin-top: 1rem;
+            }
+        }
+
+        @include breakpoint-tablet {
+            @include mobileTabletLayout;
+        }
         @include breakpoint-mobile {
-            width: fit-content;
-            margin: 0 auto;
+            @include mobileTabletLayout;
         }
     }
 
@@ -107,8 +123,8 @@
                 }
             }
             @include breakpoint-mobile() {
-                padding-top: 2rem;
-                max-width: 240px;
+                padding-top: 1rem;
+                // max-width: 240px;
                 margin: 0 auto;
             }
         }

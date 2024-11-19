@@ -36,11 +36,11 @@ const PortfolioItem = ({ props }: { props: PortfolioProps }) => {
     return (
         <section>
             <div>
+                <h2 className={styles.projectName}>{props.name}</h2>
                 <section className={styles.content}>
                     {/* Tech Stack */}
                     <div>
                         <div>
-                            <h2 className={styles.projectName}>{props.name}</h2>
                             <div className={styles.subtitles}>
                                 {props.headings.map((item, i) => {
                                     return <p key={i}>{item}</p>;
@@ -249,14 +249,16 @@ const memmoMakePortfolio = {
 const exhibitionPortfolio = {
     name: "Exhibits",
     headings: [
-        "• Freelance website for for ‘Exhibits’ App (WIP), enabling users to explore exhibitions by venue, exhibit, category, and artist in London",
-        "• Served as both designer and developer, adapting designs from the existing mobile app and branding to create a cohesive and visually engaging website",
+        "• Freelance : Designed and developed Exhibits web-app as the sole contributor. Collaborated with the founder through meetings to refine and iterate designs.",
+        "• Exhibits’ transforms how users discover and engage with London’s vibrant art scene, offering an intuitive interface to explore over ongoing 150 exhibits, 250 venues, and 75 curated categories. The also website aims to promote the existing mobile app. ",
+        "• Implemented seamless integration of existing Django backend with Next.js app. Optimised front-end performance through server-side rendering (SSR) and API caching to ensure fast and cost-efficient data fetching",
+        "• Work in Progress | Pre-Deployment Stage",
     ],
     techStack: [
         ["Next.js", "TypeScript"],
-        ["React Query"],
-        ["TailwindCSS", "ShadCn"],
-        ["Django"],
+        ["TailwindCSS", "ShadCn", "Framer Motion"],
+        ["React Query", "AuthJs", "React-Hook-Form", "Zod", "Zustand"],
+        ["Django REST framework"],
     ],
     // gitLink: "https://github.com/AndrewCDang/Exhibition",
     // webLink: "https://exhibition.andrewcdang.com/",
@@ -287,6 +289,7 @@ function WebPortfolio({
                 <PortfolioItem props={hangManPortfolio} />
                 <hr className={styles.hr}></hr>
                 <PortfolioItem props={webPortfolio} />
+                <hr className={styles.hr}></hr>
             </section>
         </section>
     );
