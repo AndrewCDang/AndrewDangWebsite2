@@ -249,10 +249,10 @@ const memmoMakePortfolio = {
 const exhibitionPortfolio = {
     name: "Exhibits",
     headings: [
-        "• Freelance : Designed and developed Exhibits web-app as the sole contributor. Collaborated with the founder through meetings to refine and iterate designs.",
-        "• Exhibits’ transforms how users discover and engage with London’s vibrant art scene, offering an intuitive interface to explore over ongoing 150 exhibits, 250 venues, and 75 curated categories. The also website aims to promote the existing mobile app. ",
-        "• Implemented seamless integration of existing Django backend with Next.js app. Used SSG to generate static pages for SEO purposes, ISR to improve page load times/reduce server load.",
-        "• Achieved scores of at least 90/100 on Lighthouse (Performance, Accessibility SEO).",
+        "• Freelance : Worked on Exhibits web-app as the sole designer and developer. Collaborated with the founder through meetings to refine and iterate designs.",
+        "• Exhibits transforms how users discover and engage with London’s vibrant art scene. With an intuitive interface, it allows exploration of over 150 ongoing exhibits, 250 venues, and 75 curated categories — all constantly updated to ensure users never miss out on something new.",
+        "• Seamlessly integrated an existing Django backend with a Next.js app, utilising SSG, ISR, and fetch caching to achieve faster page loads, improved SEO, and reduced server load.",
+        "• Achieved Lighthouse scores of 90+ for Performance, Accessibility, Best Practices, and SEO.",
     ],
     techStack: [
         ["Next.js", "TypeScript"],

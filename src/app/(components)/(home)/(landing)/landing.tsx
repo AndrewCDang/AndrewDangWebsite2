@@ -216,13 +216,11 @@ function Landing({
                             <div className={styles.summaryLine}>
                                 <LandingSvg3 />
                                 <p>
-                                    I enjoy problem-solving and learning new
-                                    libraries and software patterns/methods to
-                                    implement in my personal apps.
+                                    I enjoy problem-solving through
+                                    LeetCode-style coding challenges exploring
+                                    new software patterns which I regularly
+                                    apply in my personal projects.
                                 </p>
-                                {/* I tackle
-                                    challenges from Great FrontEnd to gain top
-                                    industry techniques. */}
                             </div>
                         </div>
                         <div className={styles.glow}>

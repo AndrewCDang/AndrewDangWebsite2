@@ -20,8 +20,13 @@ function ExhibitsVideo() {
                     playsInline
                 >
                     <source
-                        src={"/homepage/exhibits_walkthrough.webm"}
-                        type="video/webm"
+                        media="(min-width: 1200px)"
+                        src={"/homepage/241219_Exhibits_video_1080p.mp4"}
+                        type="video/mp4"
+                    />
+                    <source
+                        src={"/homepage/241219_Exhibits_video_480p.mp4"}
+                        type="video/mp4"
                     />
                     Your browser does not support the video tag.
                 </video>
