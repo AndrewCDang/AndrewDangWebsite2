@@ -251,8 +251,8 @@ const exhibitionPortfolio = {
     headings: [
         "• Freelance : Designed and developed Exhibits web-app as the sole contributor. Collaborated with the founder through meetings to refine and iterate designs.",
         "• Exhibits’ transforms how users discover and engage with London’s vibrant art scene, offering an intuitive interface to explore over ongoing 150 exhibits, 250 venues, and 75 curated categories. The also website aims to promote the existing mobile app. ",
-        "• Implemented seamless integration of existing Django backend with Next.js app. Optimised front-end performance through server-side rendering (SSR) and API caching to ensure fast and cost-efficient data fetching",
-        "• Work in Progress | Pre-Deployment Stage",
+        "• Implemented seamless integration of existing Django backend with Next.js app. Used SSG to generate static pages for SEO purposes, ISR to improve page load times/reduce server load.",
+        "• Achieved scores of at least 90/100 on Lighthouse (Performance, Accessibility SEO).",
     ],
     techStack: [
         ["Next.js", "TypeScript"],
