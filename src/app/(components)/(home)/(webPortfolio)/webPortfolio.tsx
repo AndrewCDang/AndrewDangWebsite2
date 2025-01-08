@@ -20,6 +20,7 @@ import Image from "next/image";
 import FlashmuVideo from "./assets/flashmuVideo";
 import ExhibitsVideo from "./assets/exhibitsVideo";
 import PortfolioCarousel from "./portfolioCarousel";
+import DoorDilemma from "./assets/doorDilemmaVideo";
 
 export type PortfolioProps = {
     name: string;
@@ -270,6 +271,23 @@ const exhibitionPortfolio = {
     scrollBar: false,
 };
 
+const doorDilemmaPortfolio = {
+    name: "Door Dilemma",
+    headings: [
+        "• Web game created/built as part of Founders & Coders submission. Built using only HTML, CSS, and JavaScript.",
+        "• Players take in turn to choose 'doors' that result in reward or penalty. Higher risks = Higher rewards. Special effects and modifiers offers exciting gameplay and strategy.",
+    ],
+    techStack: [["HTML", "CSS", "JavaScript"]],
+    gitLink: "https://github.com/AndrewCDang/door-dilemma",
+    webLink: "https://andrewcdang.github.io/door-dilemma/",
+    video: {
+        caption: "Door Dilemma Game",
+        video: <DoorDilemma />,
+    },
+
+    scrollBar: false,
+};
+
 function WebPortfolio({
     webPortfolioRef,
 }: {
@@ -285,6 +303,8 @@ function WebPortfolio({
                 <PortfolioItem props={clipprPortfolio} />
                 <hr className={styles.hr}></hr>
                 <PortfolioItem props={racketPortfolio} />
+                <hr className={styles.hr}></hr>
+                <PortfolioItem props={doorDilemmaPortfolio} />
                 <hr className={styles.hr}></hr>
                 <PortfolioItem props={hangManPortfolio} />
                 <hr className={styles.hr}></hr>
