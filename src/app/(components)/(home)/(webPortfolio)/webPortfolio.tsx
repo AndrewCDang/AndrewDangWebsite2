@@ -262,7 +262,7 @@ const exhibitionPortfolio = {
         ["Django REST framework"],
     ],
     // gitLink: "https://github.com/AndrewCDang/Exhibition",
-    // webLink: "https://exhibition.andrewcdang.com/",
+    webLink: "https://www.exhibits-app.co.uk/",
     video: {
         caption: "Exhibits website",
         video: <ExhibitsVideo />,
