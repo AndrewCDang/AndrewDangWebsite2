@@ -174,11 +174,13 @@ const webPortfolio = {
 const racketPortfolio = {
     name: "Racket Radar",
     headings: [
-        "Personalised badminton racket finder and matcher based on skill level and user preferences",
+        "Shortlisted Project @ HyperionDev Hackathon",
+        "'Save time and money by discovering the perfect badminton racket tailored to your skill level and preferences.'",
     ],
     techStack: [
         ["React", "JavaScript", "CSS"],
         ["Node.js", "Express.js", "MongoDb"],
+        ["Puppeteer", "Axios"],
     ],
     gitLink: "https://github.com/AndrewCDang/RacketRadar",
     webLink: "https://racket-radar.netlify.app/",
